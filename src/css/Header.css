@@ -9,7 +9,7 @@ body {
     color: #fff;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Align the nav-links to the right */
     align-items: center;
     position: sticky;
     top: 0;
@@ -87,7 +87,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end; /* Ensure nav-links align right on mobile */
     }
 
     .menu-icon {

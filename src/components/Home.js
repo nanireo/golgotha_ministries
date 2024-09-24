@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import MapLink from './MapLink';
-import HomeDoctorProfile from './HomeDoctorProfile';
+// import HomeDoctorProfile from './HomeDoctorProfile';
+import YoutubeVideos from './YoutubeVideos';
+
 
 
 function Home() {
@@ -83,9 +85,12 @@ At Golgotha Ministries,
                 </div>
             </div> */}
 
+            <div> 
+                <YoutubeVideos/>
+            </div>
 
             {/* Who We Are Section */}
-            <div className="WhoWeAreContainer">
+            {/* <div className="WhoWeAreContainer">
                 <div className="textContainer">
                     <img src="HomePagePics/whoWeAre1.jpeg" alt="Medical Services" className="mainImage" />
                     <div className="textOverlay">
@@ -106,18 +111,17 @@ At Golgotha Ministries,
                         <img src="HomePagePics/integrity.png" alt="Integrity" className="pngIcon" /> <p>Compassion</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Head of Institution */}
 
-            <div>
-
+            {/* <div>
                 <HomeDoctorProfile/>
-            </div>
+            </div> */}
 
 
             {/* Notable Alumni Section */}
-            <div className="NotableAlumni">
+            {/* <div className="NotableAlumni">
                 <h4>Notable <span className="highlight">Alumni</span></h4>
                 <div className="alumni-frame">
                     <img src="pics/DrARoshini.jpeg" alt="Dr. A Roshini" className="DrARoshini" />
@@ -125,7 +129,7 @@ At Golgotha Ministries,
                         <b>Dr. A. Roshini</b> <br />ENT Gold Medalist KNRUHS - 2022
                     </p>
                 </div>
-            </div>
+            </div> */}
 
             <div>
                 <MapLink />

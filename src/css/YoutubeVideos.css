@@ -1,0 +1,21 @@
+.youtube-video-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .video-wrapper {
+    width: 100%;
+    max-width: 560px;
+  }
+  
