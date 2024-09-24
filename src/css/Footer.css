@@ -7,48 +7,40 @@
 
 .footer-content {
     display: flex;
-    align-items: left; /* Align vertically in the center */
+    align-items: center; /* Align items vertically in the center */
     justify-content: space-between; /* Spread items across the row */
-    max-width: 600px; /* Optional: Limit the width of the footer content */
-    gap: 800px;
+    max-width: 1200px; /* Optional: Limit the width of the footer content */
+    margin: 0 auto; /* Center footer content */
 }
 
 .footer_logo {
+    flex: 1; /* Take equal space */
     display: flex;
-    align-items: center;
-     
+    align-items: center; /* Center vertically */
+}
+
+.footer_logo img {
+    max-width: 100px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.contact-info {
+    flex: 2; /* Take more space compared to logo */
+    text-align: left; /* Align text to the left */
 }
 
 .social_media {
     display: flex;
     align-items: center;
-    
+    flex: 1; /* Take equal space */
 }
 
 .social_media a {
     margin-left: 20px; /* Adjust spacing between icons as needed */
 }
 
-.social_media img {
-    width: 24px; /* Adjust size as needed */
-    height: auto;
-}
-
 .Contact-Uscolor {
     color: #ff2b01;
-}
-
-.info-container {
-    display: flex;
-    text-align: left;
-    justify-content: center; /* Center columns horizontally */
-    gap: 500px; /* Space between columns */
-}
-
-.contact-info,
-.corporate-office-info {
-    margin-bottom: 20px; /* Spacing between sections within each column */
-    max-width: 300px; /* Optional: limit width of columns */
 }
 
 .footer-bottom {

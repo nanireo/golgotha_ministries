@@ -3,8 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import MapLink from './MapLink';
 // import HomeDoctorProfile from './HomeDoctorProfile';
 import YoutubeVideos from './YoutubeVideos';
-
-
+import Banner from './Banner';
 
 function Home() {
     // State to manage "Read More" toggle for Chairman's Message
@@ -16,7 +15,9 @@ function Home() {
 
     return (
         <main>
-        
+          <div>
+                <Banner />
+              </div>  
             {/* Chairman's Message Section */}
             <div className="Chairmans-Message">
                 <img src="logo/samuel.jpg" alt="Chairman'sPic" className="ChairmansPic" />
@@ -84,6 +85,7 @@ At Golgotha Ministries,
                     </div>
                 </div>
             </div> */}
+          
 
             <div> 
                 <YoutubeVideos/>

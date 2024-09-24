@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import react-icons
+import Home from './Home';
+
+
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,25 +35,29 @@ function Header() {
 
                 <nav className={isMenuOpen ? 'active' : ''}>
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="./Home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Gallery</a></li>
                         <li><a href="#contact">Our Branches</a></li>
                         <li><a href="#departments">Vision</a></li>
                         <li><a href="#academics">Downloads</a></li>
-                        <li><a href="#alumni">Contact Us</a></li>
+                        <li><a href="./ContactUs">Contact Us</a></li>
                         {/* <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="#marb">Information as required by MARB of NMC</a></li>
                         <li><a href="#careers">Career/Jobs and opportunities</a></li> */}
                     </ul>
                     {/* Include extra-info in the dropdown menu for mobile view */}
-                    <div className="extra-info">
+                    {/* <div className="extra-info">
                         <h3>Anti Ragging</h3>
                         <p>Information as required by MARB of NMC</p>
-                    </div>
+                    </div> */}
                 </nav>
             </header>
+
+            <main>
+
+            </main>
         </>
     );
 }
