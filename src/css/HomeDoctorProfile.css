@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  height: 100vh; /* Full viewport height */
+}
+
+.HeadOfInstitution-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 40px;
+  border: 1px solid #ff4500;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.arrow-left, .arrow-right {
+  font-size: 3em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.details-section {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.doctor-image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.HeadOfInstitution-name {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+.HeadOfInstitution-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.HeadOfInstitution-experience {
+  margin-bottom: 20px;
+}
+
+.HeadOfInstitution-experience ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.HeadOfInstitution-experience li {
+  margin-bottom: 10px;
+}
+
+.HeadOfInstitution-contact {
+  margin-top: auto;
+}
+
+.HeadInstitutionhighlight {
+  color: #ff4500;
+}
+
+.HeadOfInstitution h4 {
+  font-size: 2.5em;
+  text-align: center;
+}

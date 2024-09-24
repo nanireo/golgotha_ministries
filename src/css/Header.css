@@ -1,0 +1,165 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 140px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px; /* Adjust the size of the logo as needed */
+    margin-right: 20px; /* Adds spacing between the logo and text */
+}
+
+.college-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #003366;
+}
+
+.college-info h1 {
+    margin: 0;
+    font-size: 40px; /* Adjust the font size as needed */
+}
+
+/* Hide extra-info on desktop view */
+.extra-info {
+    display: none; /* Hide extra-info by default (desktop view) */
+    text-align: right;
+    padding: 70px;
+    font-size: 14px; /* Adjust the size of additional info text */
+}
+
+.extra-info p {
+    margin: 5px 0; /* Optional: adds some spacing between the paragraphs */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px; /* Add some padding to make the box larger */
+    border-radius: 2px; /* Optional: Round the corners slightly */
+    transition: background-color 0.3s ease; /* Smooth transition for the color change */
+}
+
+nav ul li a:hover {
+    background-color: #ff3232;
+    color: #fff; /* Ensure text color remains white */
+}
+
+/* General styles for mobile view */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon only in mobile view */
+        cursor: pointer;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
+
+    .left-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .extra-info {
+        display: none; /* Hide extra-info in mobile view by default */
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background-color: #003366;
+        position: absolute;
+        top: 60px; /* Adjust based on the height of your nav bar */
+        left: 0;
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+@media (max-width: 480px) {
+    .college-info h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .extra-info {
+        display: block; /* Show extra-info in mobile view */
+        font-size: 12px;
+        background-color: #003366;
+        color: #fff;
+        padding: 15px;
+        position: absolute;
+        top: 60px; /* Adjust based on your design */
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+}

@@ -1,0 +1,68 @@
+.footer {
+    background-color: #003366; /* Background color */
+    color: #F1F1F1; /* Text color */
+    text-align: center;
+    padding: 20px; /* Padding */
+}
+
+.footer-content {
+    display: flex;
+    align-items: left; /* Align vertically in the center */
+    justify-content: space-between; /* Spread items across the row */
+    max-width: 600px; /* Optional: Limit the width of the footer content */
+    gap: 800px;
+}
+
+.footer_logo {
+    display: flex;
+    align-items: center;
+     
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    
+}
+
+.social_media a {
+    margin-left: 20px; /* Adjust spacing between icons as needed */
+}
+
+.social_media img {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+}
+
+.Contact-Uscolor {
+    color: #ff2b01;
+}
+
+.info-container {
+    display: flex;
+    text-align: left;
+    justify-content: center; /* Center columns horizontally */
+    gap: 500px; /* Space between columns */
+}
+
+.contact-info,
+.corporate-office-info {
+    margin-bottom: 20px; /* Spacing between sections within each column */
+    max-width: 300px; /* Optional: limit width of columns */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Spacing above the bottom section */
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ffffff; /* White line */
+    margin: 20px 0; /* Spacing around the line */
+}
+
+.copyright-notice {
+    font-size: 14px; /* Font size */
+    color: #F1F1F1; /* Text color */
+}

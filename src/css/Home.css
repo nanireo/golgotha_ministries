@@ -1,0 +1,244 @@
+.OurServicesH1Text {
+    text-align: center;
+    
+}
+
+.highlight {
+    color: #ff3232; /* Your preferred color */
+}
+
+.Our_Services_Pics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 3%;
+}
+
+.image-container img {
+    display: block;
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover zoom effect */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    flex-direction: column; /* Align content vertically */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column; /* Stack the icon/logo and text vertically */
+    align-items: center;
+    text-align: center;
+    gap: 5px; /* Space between icon/logo and text */
+}
+
+.overlay-icon {
+    width: 40px; /* Increased icon size */
+    height: auto;
+    color: white; /* Icon color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+.overlay-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth color and size transition */
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+.image-container:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background on hover */
+}
+
+.image-container:hover .overlay-icon {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+}
+
+.image-container:hover .overlay-text {
+    font-size: 20px; /* Increase text size on hover */
+}
+
+
+
+
+.WhoWeAreContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: lightred; /* Set light red background */
+  }
+  
+  .textContainer {
+    position: relative;
+  }
+  
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .textOverlay {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    background-color: white; /* White background for the text */
+    color: black; /* Black text color */
+    padding: 10px;
+    max-width: 50%;
+    border-radius: 3%;
+  }
+  
+  .OurServicesH1Text {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #f00; /* Highlighted text in red */
+  }
+  
+  .pngImages {
+    position: absolute;
+    bottom: 10px;
+    right: 5%;
+    display: flex;
+    gap: 10px; /* Gap between images */
+    background-color: #f00; /* Light red background */
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  .pngImages p{
+    color: #fff;
+  } 
+  
+  .pngIcon {
+    width: 50px;
+    height: auto;
+  }
+  
+
+ .Chairmans-Message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5; /* Set background color for the container */
+    padding: 20px; /* Increase padding for a larger container */
+    border-radius: 10px; /* Optional: Add rounded corners to the container */
+    max-width: 1200px; /* Increase max-width for a wider container */
+    width: 100%; /* Ensure it takes up full width of the viewport */
+    margin: 20px auto; /* Center the container horizontally */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.ChairmansPic {
+    width: 200px; /* Increase the size of the image */
+    height: 200px;
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+.Chairmans-Message h4, 
+.Chairmans-Message p {
+    text-align: center;
+    margin: 10px 0; /* Increase margins for spacing */
+}
+
+.Chairmans-Message h4 {
+    font-size: 2em; /* Larger font for the name */
+    font-weight: bold; /* Bold the name */
+}
+
+.Chairmans-Message p {
+    font-size: 1.2em;
+    color: #555; /* Light gray color for the text */
+    text-align: justify;
+}
+
+.Chairmans-Message h3 {
+    color:  #f00; /* Separate color for the message title */
+    text-align: left;
+    font-size: 2em; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Chairmans-Message .content {
+    text-align: justify;
+    padding: 20px; /* Increase padding for the text content */
+    background-color: #ffffff; /* White background for text */
+    border-radius: 5px; /* Rounded corners for the text section */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow for the text */
+    line-height: 1.8; /* Increased line spacing for readability */
+    width: 90%; /* Full width for the text content */
+}
+
+
+.NotableAlumni {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  height: 100vh; /* Full viewport height */
+}
+
+.NotableAlumni h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.alumni-frame {
+  display: inline-block;
+  border: 2px solid #ddd; 
+  border-radius: 8px; 
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  text-align: center;
+}
+
+.alumni-frame img {
+  display: block;
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.alumni-name {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.highlight {
+  color: #ff4500; 
+}
