@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // Icons for show more/less
+import { FaYoutube } from 'react-icons/fa'; // YouTube icon for the subscribe button
 
 const YoutubeChannelVideos = () => {
-  const [videos, setVideos] = useState([]);
+  const [featuredVideo, setFeaturedVideo] = useState(null);
+  const [otherVideos, setOtherVideos] = useState([]);
+  const [videosLimit, setVideosLimit] = useState(3);
+  const [showMoreVideos, setShowMoreVideos] = useState(false);
 
-  // API key and YouTube channel ID
-  const apiKey = 'AIzaSyATrznS4XaSWBtP20ApibX3bgiASjpXN3g';
-  const channelId = 'UCUvqZ3JiWs4Aj4AhK2062xQ'; // Golgotha Ministry Armoor channel ID
+  const apiKey = 'AIzaSyATrznS4XaSWBtP20ApibX3bgiASjpXN3g'; // Replace with your API key
+  const channelId = 'UCUvqZ3JiWs4Aj4AhK2062xQ';
 
-  // Fetch YouTube videos
   useEffect(() => {
     const fetchVideos = async () => {
       try {
@@ -18,18 +21,18 @@ const YoutubeChannelVideos = () => {
               key: apiKey,
               channelId: channelId,
               part: 'snippet',
-              maxResults: 8, // You can modify the result limit
-              order: 'date',  // Sort videos by date (newest first)
+              maxResults: 10,
+              order: 'date',
               type: 'video',
             }
           }
         );
 
-        // Check if the response contains any items
-        if (videoResponse.data.items) {
-          setVideos(videoResponse.data.items);
-        } else {
-          console.error('No videos found.');
+        const videos = videoResponse.data.items;
+
+        if (videos.length) {
+          setFeaturedVideo(videos[0]); // Set the first video as the featured video
+          setOtherVideos(videos.slice(1)); // Remaining videos in the list
         }
       } catch (error) {
         console.error('Error fetching videos:', error);
@@ -41,24 +44,65 @@ const YoutubeChannelVideos = () => {
 
   return (
     <div className="youtube-video-container">
-      <h2>Golgotha Ministry Armoor Videos</h2>
-      <div className="video-grid">
-        {videos.map((video) => (
-          <div key={video.id.videoId} className="video-wrapper">
-            <h3>{video.snippet.title}</h3>
-            {/* Embed the YouTube video using iframe */}
-            <iframe
-              width="100%"
-              height="315"
-              src={`https://www.youtube.com/embed/${video.id.videoId}`}
-              title={video.snippet.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        ))}
+      <h1>SAMUEL MORIES ON YOU TUBE</h1>
+
+      {/* Subscribe button */}
+      <div className="subscribe-button-container">
+        <a
+          href={`https://www.youtube.com/channel/${channelId}?sub_confirmation=1`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="subscribe-button"
+        >
+          <FaYoutube className="youtube-icon" /> Subscribe
+        </a>
       </div>
+
+      <div className="video-section">
+        <div className="video-row">
+          {/* Featured (big) video */}
+          <div className="featured-video-wrapper">
+            {featuredVideo && (
+              <iframe
+                width="100%"
+                height="450"
+                src={`https://www.youtube.com/embed/${featuredVideo.id.videoId}`}
+                title={featuredVideo.snippet.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            )}
+          </div>
+
+          {/* Smaller videos */}
+          <div className="small-videos-wrapper">
+            {otherVideos.slice(0, videosLimit).map((video) => (
+              <div key={video.id.videoId} className="video-wrapper">
+                <iframe
+                  width="100%"
+                  height="150"
+                  src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                  title={video.snippet.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <button 
+        className="show-more-btn" 
+        onClick={() => {
+          setShowMoreVideos(!showMoreVideos);
+          setVideosLimit(showMoreVideos ? 3 : otherVideos.length);
+        }}>
+        {showMoreVideos ? 'Show Less ' : 'Show More '}
+        {showMoreVideos ? <FaChevronUp /> : <FaChevronDown />}
+      </button>
     </div>
   );
 };

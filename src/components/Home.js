@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import MapLink from './MapLink';
-// import HomeDoctorProfile from './HomeDoctorProfile';
 import YoutubeVideos from './YoutubeVideos';
 import Banner from './Banner';
 
 function Home() {
-    // State to manage "Read More" toggle for Chairman's Message
     const [isReadMore, setIsReadMore] = useState(false);
 
     const toggleReadMore = () => {
@@ -15,124 +13,34 @@ function Home() {
 
     return (
         <main>
-          <div>
+            <div>
                 <Banner />
-              </div>  
-            {/* Chairman's Message Section */}
+            </div> 
+
             <div className="Chairmans-Message">
-                <img src="logo/samuel.jpg" alt="Chairman'sPic" className="ChairmansPic" />
-                <h4>Bro. Samuel Mories (M.B.A., M.Th.)</h4>
-                <p>Associate Pastor</p>
+    <img src="sliding/GM_3.jpg" alt="Chairman'sPic" className="ChairmansPic" />
+    <div className="text-overlay">
+        <h4>Bro. Samuel Mories (M.B.A., M.Th.)</h4>
+        <p>Associate Pastor</p>
+        <p>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Bro. Samuel Mories serves as the dedicated Associate Pastor at Golgotha Ministries in Armoor. With a strong academic foundation holding both an M.B.A. and a Master of Theology (M.Th.), Bro. Samuel brings a unique blend of spiritual insight and organizational leadership to the ministry. His passion for sharing the Gospel and commitment to serving the local community have been instrumental in the growth and impact of the church.
 
-                {/* <h3>Let us recollect our Founder Chairman’s Message</h3> */}
-                <div className="content">
-                    <p>
-                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Bro. Samuel Mories serves as the dedicated Associate Pastor at Golgotha Ministries in Armoor. With a strong academic foundation holding both an M.B.A. and a Master of Theology (M.Th.), Bro. Samuel brings a unique blend of spiritual insight and organizational leadership to the ministry. His passion for sharing the Gospel and commitment to serving the local community have been instrumental in the growth and impact of the church.
+            {isReadMore && (
+                <span>
+                    Bro. Samuel Mories serves as the dedicated Associate Pastor at Golgotha Ministries in Armoor. With a strong academic foundation holding both an M.B.A. and a Master of Theology (M.Th.), Bro. Samuel brings a unique blend of spiritual insight and organizational leadership to the ministry. His passion for sharing the Gospel and commitment to serving the local community have been instrumental in the growth and impact of the church. At Golgotha Ministries, Bro. Samuel focuses on nurturing spiritual growth, guiding discipleship programs, and supporting the vision of the church through pastoral care. His heart for service extends beyond the church walls, as he actively engages with outreach initiatives aimed at uplifting the underprivileged and spreading the message of Christ’s love. In addition to his pastoral duties, Bro. Samuel also leverages his business acumen to ensure that the church’s ministries are efficiently managed, allowing the church to thrive and meet the needs of its congregation and community. He continues to inspire and lead with humility, dedication, and unwavering faith in God’s plan.
+                </span>
+            )}
+        </p>
+        <button onClick={toggleReadMore} className="read-more-button">
+            {isReadMore ? 'Read Less' : 'Read More'}
+        </button>
+    </div>
+</div>
 
-At Golgotha Ministries,
-                        {isReadMore && (
-                            <span>
-                                
 
-                                Bro. Samuel Mories serves as the dedicated Associate Pastor at Golgotha Ministries in Armoor. With a strong academic foundation holding both an M.B.A. and a Master of Theology (M.Th.), Bro. Samuel brings a unique blend of spiritual insight and organizational leadership to the ministry. His passion for sharing the Gospel and commitment to serving the local community have been instrumental in the growth and impact of the church.
-
-                                At Golgotha Ministries, Bro. Samuel focuses on nurturing spiritual growth, guiding discipleship programs, and supporting the vision of the church through pastoral care. His heart for service extends beyond the church walls, as he actively engages with outreach initiatives aimed at uplifting the underprivileged and spreading the message of Christ’s love.
-
-                                In addition to his pastoral duties, Bro. Samuel also leverages his business acumen to ensure that the church’s ministries are efficiently managed, allowing the church to thrive and meet the needs of its congregation and community. He continues to inspire and lead with humility, dedication, and unwavering faith in God’s plan.
-                                                            </span>
-                        )}  <button onClick={toggleReadMore} className="read-more-button">
-                        {isReadMore ? 'Read Less' : 'Read More'}
-                    </button>
-                    </p>
-                   
-                </div>
-            
-            </div>
-
-            {/* <h1 className="OurServicesH1Text">Our <span className="highlight">Services</span></h1> */}
-
-            {/* <div className="Our_Services_Pics">
-                {/* Education Service 
-                <div className="image-container">
-                    <img src="OurServicesPics/education-home.png" alt="Education" />
-                    <div className="overlay">
-                        <div className="overlay-content">
-                            <i className="bi bi-book overlay-icon"></i>
-                            <span className="overlay-text">Education</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Departments Service
-                <div className="image-container">
-                    <img src="OurServicesPics/departments.png" alt="Departments" />
-                    <div className="overlay">
-                        <div className="overlay-content">
-                            <i className="bi bi-building-add overlay-icon"></i>
-                            <span className="overlay-text">Departments</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Medical Services
-                <div className="image-container">
-                    <img src="OurServicesPics/med-services-surgery-featured.png" alt="Medical Services" />
-                    <div className="overlay">
-                        <div className="overlay-content">
-                            <i className="bi bi-capsule overlay-icon"></i>
-                            <span className="overlay-text">Medical Services</span>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-          
-
-            <div> 
+            <div>
                 <YoutubeVideos/>
             </div>
-
-            {/* Who We Are Section */}
-            {/* <div className="WhoWeAreContainer">
-                <div className="textContainer">
-                    <img src="HomePagePics/whoWeAre1.jpeg" alt="Medical Services" className="mainImage" />
-                    <div className="textOverlay">
-                        <h1 className="OurServicesH1Text">Who <span className="highlight">we are</span></h1>
-                        <p>
-                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   Bhaskar Medical College and Bhaskar General Hospital are committed to excellence in healthcare education and patient care. Established with the vision of nurturing future medical professionals and providing quality healthcare services, our institution stands as a beacon of learning and healing in the community.
-                        <br /><br />
-                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; At Bhaskar Medical College, we offer a comprehensive curriculum that integrates modern medical education with hands-on clinical experience. Our dedicated faculty, state-of-the-art infrastructure, and innovative teaching methodologies ensure that our students receive a well-rounded education that prepares them to meet the evolving challenges of the healthcare industry.
-                        <br /><br />
-                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Bhaskar General Hospital serves as the primary teaching hospital for the college, providing an extensive range of medical services across various specialties. With a patient-centric approach, advanced diagnostic facilities, and a team of skilled healthcare professionals, we are dedicated to delivering compassionate and high-quality care to all.
-                        <br /><br />
-                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Together, Bhaskar Medical College and Bhaskar General Hospital strive to foster a culture of excellence, innovation, and community service, making a positive impact on society through education, research, and patient care.
-                        </p>
-                    </div>
-                    <div className="pngImages">
-                        <img src="HomePagePics/compassion.png" alt="Compassion" className="pngIcon" /> <p>Integrity</p>
-                        <img src="HomePagePics/excellence.png" alt="Excellence" className="pngIcon" /> <p>Excellence</p>
-                        <img src="HomePagePics/integrity.png" alt="Integrity" className="pngIcon" /> <p>Compassion</p>
-                    </div>
-                </div>
-            </div> */}
-
-            {/* Head of Institution */}
-
-            {/* <div>
-                <HomeDoctorProfile/>
-            </div> */}
-
-
-            {/* Notable Alumni Section */}
-            {/* <div className="NotableAlumni">
-                <h4>Notable <span className="highlight">Alumni</span></h4>
-                <div className="alumni-frame">
-                    <img src="pics/DrARoshini.jpeg" alt="Dr. A Roshini" className="DrARoshini" />
-                    <p className="alumni-name">
-                        <b>Dr. A. Roshini</b> <br />ENT Gold Medalist KNRUHS - 2022
-                    </p>
-                </div>
-            </div> */}
-
             <div>
                 <MapLink />
             </div>
@@ -141,14 +49,6 @@ At Golgotha Ministries,
 }
 
 export default Home;
-
-
-
-
-
-
-
-
 
 
 

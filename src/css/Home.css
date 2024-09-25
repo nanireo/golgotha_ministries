@@ -144,61 +144,45 @@
   }
   
 
- .Chairmans-Message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f5f5f5; /* Set background color for the container */
-    padding: 20px; /* Increase padding for a larger container */
-    border-radius: 10px; /* Optional: Add rounded corners to the container */
-    max-width: 1200px; /* Increase max-width for a wider container */
-    width: 100%; /* Ensure it takes up full width of the viewport */
-    margin: 20px auto; /* Center the container horizontally */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+
+
+  .Chairmans-Message {
+    display: flex; /* Use flexbox for side-by-side layout */
+    width: 100%; /* Full width */
+    padding-top: 20px; /* Use lowercase for 'px' */
+    padding-bottom: 20px; /* Use lowercase for 'px' */
+    position: relative; /* Position relative for absolute positioning of overlay */
 }
 
 .ChairmansPic {
-    width: 200px; /* Increase the size of the image */
-    height: 200px;
-    object-fit: cover; /* Ensure the image maintains aspect ratio */
-    border-radius: 50%; /* Make the image circular */
-    margin-bottom: 20px; /* Add space below the image */
+    width: 70%; /* Set width of the image */
+    height: auto; /* Auto height */
+    object-fit: cover; /* Cover the area */
 }
 
-.Chairmans-Message h4, 
-.Chairmans-Message p {
-    text-align: center;
-    margin: 10px 0; /* Increase margins for spacing */
+.text-overlay {
+    position: absolute; /* Absolute positioning for overlay */
+    top: 0; /* Align to the top of the image */
+    left: 0; /* Align to the left of the image */
+    width: 100%; /* Full width */
+    height: 100%; /* Auto height */
+
+    background: linear-gradient(rgba(13, 14, 44, 0.7), rgba(255, 8, 8, 0.5)); /* Gradient background */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align text to the left */
+    text-align: justify; /* Justify text alignment */
 }
 
-.Chairmans-Message h4 {
-    font-size: 2em; /* Larger font for the name */
-    font-weight: bold; /* Bold the name */
-}
 
-.Chairmans-Message p {
-    font-size: 1.2em;
-    color: #555; /* Light gray color for the text */
-    text-align: justify;
-}
 
-.Chairmans-Message h3 {
-    color:  #f00; /* Separate color for the message title */
-    text-align: left;
-    font-size: 2em; /* Larger font size */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
-.Chairmans-Message .content {
-    text-align: justify;
-    padding: 20px; /* Increase padding for the text content */
-    background-color: #ffffff; /* White background for text */
-    border-radius: 5px; /* Rounded corners for the text section */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow for the text */
-    line-height: 1.8; /* Increased line spacing for readability */
-    width: 90%; /* Full width for the text content */
-}
+
+
+
+
 
 
 .NotableAlumni {
