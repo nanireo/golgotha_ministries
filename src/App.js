@@ -6,7 +6,7 @@ import './css/Banner.css';
 import './css/Footer.css';
 import './css/Home.css';
 import './css/HomeDoctorProfile.css';
-import './css/YoutubeVideos.css'; // Optional CSS for styling
+import './css/YoutubeVideos.css'; // Import the CSS
 import './css/ContactUs.css'; // Optional CSS for styling
 
 import Header from './components/Header';
