@@ -1,9 +1,9 @@
 .message-pdf {
     text-align: center;
-    margin: 20px;
-    background: linear-gradient(135deg, #f06, #f90); /* Gradient background */
+    margin-top: 20px;
+    background: linear-gradient(135deg, rgb(37, 34, 119), #f90); /* Gradient background */
     padding: 20px; /* Add padding for spacing */
-    border-radius: 10px; /* Optional: rounded corners for aesthetics */
+    /* border-radius: 10px; Optional: rounded corners for aesthetics */
 }
 
 .image-container {
