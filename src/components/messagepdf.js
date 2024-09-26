@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Worker, Viewer } from "@react-pdf-viewer/core";
 import { useSwipeable } from "react-swipeable";
+import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { GlobalWorkerOptions } from "pdfjs-dist/build/pdf";
 
-// Set the worker URL
-GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js`;
+// Set the worker URL (ensure it's the latest version)
+GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`;
 
 const Messagepdf = () => {
   const [selectedPDFIndex, setSelectedPDFIndex] = useState(null);
@@ -68,7 +68,7 @@ const Messagepdf = () => {
           <button className="close-btn" onClick={() => setSelectedPDFIndex(null)}>
             Close PDF
           </button>
-          <Worker workerUrl={`//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js`}>
+          <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
             <Viewer fileUrl={pdfData[selectedPDFIndex].pdfSrc} />
           </Worker>
         </div>
