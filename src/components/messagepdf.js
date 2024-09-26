@@ -70,9 +70,19 @@ const Messagepdf = () => {
 
       {selectedPDFIndex !== null && (
         <div className="pdf-viewer">
-          <button className="close-btn" onClick={() => setSelectedPDFIndex(null)}>
-            Close PDF
-          </button>
+          <div className="pdf-actions">
+            <button className="close-btn" onClick={() => setSelectedPDFIndex(null)}>
+              Close PDF
+            </button>
+            {/* Download Button */}
+            <a
+              href={pdfData[selectedPDFIndex].pdfSrc}
+              download
+              className="download-btn"
+            >
+              Download PDF
+            </a>
+          </div>
           <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
             <Viewer fileUrl={pdfData[selectedPDFIndex].pdfSrc} />
           </Worker>
