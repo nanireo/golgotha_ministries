@@ -51,6 +51,13 @@
         font-size: 14px; /* Smaller font size for smaller screens */
         max-height: 100px; /* Reduce max height */
     }
+
+    .prev, .next {
+        width: 35px; /* Smaller buttons for smaller screens */
+        height: 35px;
+        font-size: 16px; /* Smaller font size */
+        padding: 8px; /* Less padding */
+    }
 }
 
 @media (max-width: 480px) {
@@ -58,8 +65,14 @@
         font-size: 12px; /* Even smaller font size */
         padding: 10px; /* Less padding on smaller screens */
     }
-}
 
+    .prev, .next {
+        width: 30px; /* Smaller buttons for mobile */
+        height: 30px;
+        font-size: 14px; /* Smaller font size */
+        padding: 5px; /* Less padding */
+    }
+}
 
 .prev, .next {
     cursor: pointer;

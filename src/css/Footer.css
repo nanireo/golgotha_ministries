@@ -58,3 +58,33 @@
     font-size: 14px; /* Font size */
     color: #F1F1F1; /* Text color */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .footer_logo,
+    .contact-info,
+    .social_media {
+        flex: none; /* Reset flex property */
+        margin-bottom: 10px; /* Add spacing below each item */
+    }
+
+    .social_media a {
+        margin-left: 10px; /* Adjust spacing for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .copyright-notice {
+        font-size: 12px; /* Smaller font size for copyright notice */
+    }
+}

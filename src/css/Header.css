@@ -9,11 +9,11 @@ body {
     color: #fff;
     padding: 20px;
     display: flex;
-    justify-content: flex-end; /* Align the nav-links to the right */
+    justify-content: flex-end;
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure the navbar is above other content */
+    z-index: 1000;
 }
 
 .logo-container {
@@ -31,32 +31,13 @@ body {
 }
 
 .logo img {
-    max-height: 100px; /* Adjust the size of the logo as needed */
-    margin-right: 20px; /* Adds spacing between the logo and text */
-}
-
-.college-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #003366;
+    max-height: 100px;
+    margin-right: 20px;
 }
 
 .college-info h1 {
     margin: 0;
-    font-size: 40px; /* Adjust the font size as needed */
-}
-
-/* Hide extra-info on desktop view */
-.extra-info {
-    display: none; /* Hide extra-info by default (desktop view) */
-    text-align: right;
-    padding: 70px;
-    font-size: 14px; /* Adjust the size of additional info text */
-}
-
-.extra-info p {
-    margin: 5px 0; /* Optional: adds some spacing between the paragraphs */
+    font-size: 40px;
 }
 
 nav ul {
@@ -73,12 +54,85 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 5px; /* Add some padding to make the box larger */
-    border-radius: 2px; /* Optional: Round the corners slightly */
-    transition: background-color 0.3s ease; /* Smooth transition for the color change */
+    padding: 5px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #ff3232;
-    color: #fff; /* Ensure text color remains white */
+    color: #fff;
 }
+
+/* Add a line between menu items */
+/* nav ul li {
+    padding: 10px 0;
+} */
+
+/* Responsive Design */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #003366;
+    
+}
+
+.nav-links.open {
+    display: block;
+}
+
+@media screen and (max-width: 720px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 140px;
+        right: 0;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none; /* Remove line for the last item */
+    }
+}
+
+/* Media query for 480px screens */
+@media screen and (max-width: 480px) {
+    .logo img {
+        max-height: 80px; /* Adjust logo size for smaller screens */
+    }
+
+    .college-info h1 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    .nav-links {
+        top: 120px; /* Adjust the position for smaller screens */
+    }
+
+    nav ul li {
+        padding: 15px 0; /* Increase padding between menu items */
+    }
+}
+

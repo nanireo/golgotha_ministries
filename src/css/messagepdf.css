@@ -23,7 +23,11 @@
     position: relative;
     width: 200px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease; /* Smooth transition */
+}
+
+.image-item:hover {
+    animation: shake 0.5s; /* Shake effect on hover */
 }
 
 .image-item.selected {
@@ -37,7 +41,6 @@
     aspect-ratio: 9 / 19;
     object-fit: cover;
     border-radius: 10px;
-
 }
 
 .image-overlay {
@@ -52,13 +55,10 @@
     font-size: 1.2em;
 }
 
-.message-pdf h1{
+.message-pdf h1 {
     text-align: left;
     color: #ffffff;
-
-
 }
-
 
 .button-container {
     display: flex;
@@ -76,10 +76,12 @@
     display: inline-block;
     cursor: pointer;
     border: none;
+    transition: background-color 0.2s ease; /* Transition for background color */
 }
 
 .close-btn:hover, .download-btn:hover {
     background-color: #0056b3; /* Same hover effect */
+    animation: shake 0.5s; /* Shake effect on hover */
 }
 
 .close-btn {
@@ -90,7 +92,6 @@
     font-size: 1em;
 }
 
-
 .pdf-viewer {
     background-color: #f0f0f0;
     padding: 20px;
@@ -99,7 +100,6 @@
 
 .close-btn {
     background-color: red;
-
 }
 
 button {
@@ -110,10 +110,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease; /* Transition for background color */
 }
 
 button:hover {
     background-color: #0056b3;
+    animation: shake 0.5s; /* Shake effect on hover */
 }
 
 .arrow-btn {
@@ -127,6 +129,7 @@ button:hover {
     padding: 10px;
     cursor: pointer;
     z-index: 1000;
+    transition: background-color 0.2s ease; /* Transition for background color */
 }
 
 .arrow-btn.left {
@@ -139,4 +142,14 @@ button:hover {
 
 .arrow-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
+    animation: shake 0.5s; /* Shake effect on hover */
+}
+
+/* Keyframes for shaking effect */
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
 }

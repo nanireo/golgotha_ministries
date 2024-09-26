@@ -9,8 +9,8 @@ const YoutubeChannelVideos = () => {
   const [videosLimit, setVideosLimit] = useState(3);
   const [showMoreVideos, setShowMoreVideos] = useState(false);
 
-  const apiKey = 'AIzaSyATrznS4XaSWBtP20ApibX3bgiASjpXN3g'; // Replace with your API key
-  const channelId = 'UCUvqZ3JiWs4Aj4AhK2062xQ';
+  const apiKey = 'AIzaSyB3EWcK--EJPKC94Br_QDnuhK4kNE5q7XQ'; // Replace with your API key
+  const channelId = 'UCUvqZ3JiWs4Aj4AhK2062xQ'; // Replace with your channel ID
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -30,12 +30,20 @@ const YoutubeChannelVideos = () => {
 
         const videos = videoResponse.data.items;
 
-        if (videos.length) {
+        if (videos && videos.length) {
           setFeaturedVideo(videos[0]); // Set the first video as the featured video
           setOtherVideos(videos.slice(1)); // Remaining videos in the list
+        } else {
+          console.log('No videos found.');
         }
       } catch (error) {
-        console.error('Error fetching videos:', error);
+        if (error.response) {
+          console.error('Error response:', error.response.data);
+        } else if (error.request) {
+          console.error('Error request:', error.request);
+        } else {
+          console.error('Error message:', error.message);
+        }
       }
     };
 

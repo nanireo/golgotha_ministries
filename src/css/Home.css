@@ -1,194 +1,250 @@
+.footer {
+  background-color: #003366; /* Background color */
+  color: #F1F1F1; /* Text color */
+  text-align: center;
+  padding: 20px; /* Padding */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Spread items across the row */
+  max-width: 1200px; /* Optional: Limit the width of the footer content */
+  margin: 0 auto; /* Center footer content */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer_logo {
+  flex: 1; /* Take equal space */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.footer_logo img {
+  max-width: 100px; /* Set a maximum width for the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.contact-info {
+  flex: 2; /* Take more space compared to logo */
+  text-align: left; /* Align text to the left */
+}
+
+.social_media {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Take equal space */
+}
+
+.social_media a {
+  margin-left: 20px; /* Adjust spacing between icons as needed */
+}
+
+.Contact-Uscolor {
+  color: #ff2b01;
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Spacing above the bottom section */
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ffffff; /* White line */
+  margin: 20px 0; /* Spacing around the line */
+}
+
+.copyright-notice {
+  font-size: 14px; /* Font size */
+  color: #F1F1F1; /* Text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align for smaller screens */
+  }
+
+  .footer_logo,
+  .contact-info,
+  .social_media {
+      flex: 100%; /* Full width */
+      text-align: center; /* Center text for smaller screens */
+      margin: 10px 0; /* Add spacing */
+  }
+
+  .social_media a {
+      margin-left: 10px; /* Adjust spacing for smaller screens */
+  }
+
+  .copyright-notice {
+      font-size: 12px; /* Smaller font size for mobile */
+  }
+}
+
+/* For the service images section */
 .OurServicesH1Text {
-    text-align: center;
-    
+  text-align: center;
 }
 
 .highlight {
-    color: #ff3232; /* Your preferred color */
+  color: #ff3232; /* Your preferred color */
 }
 
 .Our_Services_Pics {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .image-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 3%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 3%;
 }
 
 .image-container img {
-    display: block;
-    width: 200px; /* Adjust the size as needed */
-    height: auto;
-    transition: transform 0.3s ease; /* Smooth hover zoom effect */
+  display: block;
+  width: 200px; /* Adjust the size as needed */
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth hover zoom effect */
 }
 
 .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    flex-direction: column; /* Align content vertically */
-    transition: background-color 0.3s ease; /* Smooth background transition */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  flex-direction: column; /* Align content vertically */
+  transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 .overlay-content {
-    display: flex;
-    flex-direction: column; /* Stack the icon/logo and text vertically */
-    align-items: center;
-    text-align: center;
-    gap: 5px; /* Space between icon/logo and text */
+  display: flex;
+  flex-direction: column; /* Stack the icon/logo and text vertically */
+  align-items: center;
+  text-align: center;
+  gap: 5px; /* Space between icon/logo and text */
 }
 
 .overlay-icon {
-    width: 40px; /* Increased icon size */
-    height: auto;
-    color: white; /* Icon color */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  width: 40px; /* Increased icon size */
+  height: auto;
+  color: white; /* Icon color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover transition */
 }
 
 .overlay-text {
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth color and size transition */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease, font-size 0.3s ease; /* Smooth color and size transition */
 }
 
 .image-container:hover img {
-    transform: scale(1.1); /* Zoom in on hover */
+  transform: scale(1.1); /* Zoom in on hover */
 }
 
 .image-container:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* Darken background on hover */
+  background-color: rgba(0, 0, 0, 0.7); /* Darken background on hover */
 }
 
 .image-container:hover .overlay-icon {
-    transform: scale(1.2); /* Enlarge the icon on hover */
+  transform: scale(1.2); /* Enlarge the icon on hover */
 }
 
 .image-container:hover .overlay-text {
-    font-size: 20px; /* Increase text size on hover */
+  font-size: 20px; /* Increase text size on hover */
 }
 
+/* Responsive adjustments for service images */
+@media (max-width: 768px) {
+  .Our_Services_Pics {
+      flex-direction: column; /* Stack images vertically */
+      align-items: center; /* Center align */
+  }
 
+  .image-container img {
+      width: 150px; /* Reduce size for smaller screens */
+  }
+}
 
-
+/* Who We Are Section */
 .WhoWeAreContainer {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: lightred; /* Set light red background */
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .textContainer {
-    position: relative;
-  }
-  
-  .mainImage {
-    width: 100%;
-    height: auto;
-  }
-  
-  .textOverlay {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    background: linear-gradient(rgba(13, 14, 44, 0.7), rgba(255, 8, 8, 0.5)); /* Gradient background */
-    color: rgb(255, 255, 255); /* Black text color */
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 50;
-    text-align: justify;
-    border-radius: 3%;
-  }
-  
-  .OurServicesH1Text {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .highlight {
-    color: #f00; /* Highlighted text in red */
-  }
-  
-  .pngImages {
-    position: absolute;
-    bottom: 10px;
-    right: 5%;
-    display: flex;
-    gap: 10px; /* Gap between images */
-    background-color: #f00; /* Light red background */
-    padding: 10px;
-    border-radius: 3px;
-  }
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: lightred; /* Set light red background */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-  .pngImages p{
-    color: #fff;
-  } 
-  
-  .pngIcon {
-    width: 50px;
-    height: auto;
-  }
-  
+.textContainer {
+  position: relative;
+}
 
+.mainImage {
+  width: 100%;
+  height: auto;
+}
 
+.textOverlay {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  background: linear-gradient(rgba(13, 14, 44, 0.7), rgba(255, 8, 8, 0.5)); /* Gradient background */
+  color: rgb(255, 255, 255); /* Black text color */
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 50%;
+  text-align: justify;
+  border-radius: 3%;
+}
 
-  .Chairmans-Message {
-    display: flex; /* Use flexbox for side-by-side layout */
-    width: 100%; /* Full width */
-    padding-top: 20px; /* Use lowercase for 'px' */
-    padding-bottom: 20px; /* Use lowercase for 'px' */
-    position: relative; /* Position relative for absolute positioning of overlay */
+/* Chairman's Message Section */
+.Chairmans-Message {
+  display: flex; /* Use flexbox for side-by-side layout */
+  width: 100%; /* Full width */
+  padding-top: 20px; /* Use lowercase for 'px' */
+  padding-bottom: 20px; /* Use lowercase for 'px' */
+  position: relative; /* Position relative for absolute positioning of overlay */
 }
 
 .ChairmansPic {
-    width: 70%; /* Set width of the image */
-    height: auto; /* Auto height */
-    object-fit: cover; /* Cover the area */
+  width: 70%; /* Set width of the image */
+  height: auto; /* Auto height */
+  object-fit: cover; /* Cover the area */
 }
 
 .text-overlay {
-    position: absolute; /* Absolute positioning for overlay */
-    top: 0; /* Align to the top of the image */
-    left: 0; /* Align to the left of the image */
-    width: 100%; /* Full width */
-    height: 100%; /* Auto height */
-
-    background: linear-gradient(rgba(13, 14, 44, 0.7), rgba(255, 8, 8, 0.5)); /* Gradient background */
-    color: white; /* Text color */
-    display: flex; /* Use flexbox for vertical alignment */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: flex-start; /* Align text to the left */
-    text-align: justify; /* Justify text alignment */
+  position: absolute; /* Absolute positioning for overlay */
+  top: 0; /* Align to the top of the image */
+  left: 0; /* Align to the left of the image */
+  width: 100%; /* Full width */
+  height: 100%; /* Auto height */
+  background: linear-gradient(rgba(13, 14, 44, 0.7), rgba(255, 8, 8, 0.5)); /* Gradient background */
+  color: white; /* Text color */
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align text to the left */
+  text-align: justify; /* Justify text alignment */
 }
 
-
-
-
-
-
-
-
-
-
+/* Notable Alumni Section */
 .NotableAlumni {
   display: flex;
   flex-direction: column;
@@ -196,7 +252,7 @@
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  height: 100vh; /* Full viewport height */
+  height: auto; /* Remove full viewport height */
 }
 
 .NotableAlumni h4 {
@@ -229,4 +285,17 @@
 
 .highlight {
   color: #ff4500; 
+}
+
+/* Responsive adjustments for Notable Alumni */
+@media (max-width: 768px) {
+  .NotableAlumni {
+      height: auto; /* Remove fixed height */
+  }
+
+  .alumni-frame {
+      width: 100%; /* Full width for smaller screens */
+      max-width: 200px; /* Max width for the alumni frame */
+      margin: 10px 0; /* Margin for spacing */
+  }
 }
