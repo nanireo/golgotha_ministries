@@ -24,7 +24,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Home" element={<Home />} /> {/* Assuming you have a Home component */}
-                    <Route path="/contactus" element={<ContactUs />} />
+                    <Route path="/ContactUs" element={<ContactUs />} />
 
 
                 </Routes>

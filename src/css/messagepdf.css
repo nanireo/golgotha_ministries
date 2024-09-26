@@ -1,37 +1,43 @@
 .message-pdf {
     text-align: center;
     margin-top: 20px;
-    background: linear-gradient(135deg, rgb(37, 34, 119), #f90); /* Gradient background */
-    padding: 20px; /* Add padding for spacing */
-    /* border-radius: 10px; Optional: rounded corners for aesthetics */
+    background: linear-gradient(135deg, rgb(37, 34, 119), #f90);
+    padding: 20px;
+    position: relative;
 }
 
 .image-container {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Ensures container doesn't scroll unexpectedly */
 }
 
 .image-grid {
-    display: flex; /* Use flexbox for horizontal layout */
-    gap: 10px; /* Space between images */
-    transition: transform 0.3s ease; /* Smooth transition when scrolling */
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
 }
 
 .image-item {
     position: relative;
-    width: 200px; /* Set a fixed width for images */
+    width: 200px;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.image-item.selected {
+    border: 3px solid #007bff;
+    transform: scale(1.05);
 }
 
 .pdf-image {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    aspect-ratio: 9 / 19; /* Maintain 9:19 aspect ratio */
-    object-fit: cover; /* Cover the entire area */
-    transition: transform 0.2s ease;
-}
+    height: auto;
+    aspect-ratio: 9 / 19;
+    object-fit: cover;
+    border-radius: 10px;
 
-.pdf-image:hover {
-    transform: scale(1.05);
 }
 
 .image-overlay {
@@ -39,21 +45,28 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
     padding: 10px;
     font-size: 1.2em;
 }
 
+.message-pdf h1{
+    text-align: left;
+    color: #ffffff;
+
+
+}
+
 .pdf-viewer {
-    background-color: #f0f0f0; /* Light grey background */
+    background-color: #f0f0f0;
     padding: 20px;
     position: relative;
 }
 
 .close-btn {
-    position: relative; /* Positioned inside the viewer */
+    position: relative;
     top: 10px;
     right: 10px;
     background-color: red;
@@ -75,4 +88,29 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.arrow-btn.left {
+    left: 0;
+}
+
+.arrow-btn.right {
+    right: 0;
+}
+
+.arrow-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }

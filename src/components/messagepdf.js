@@ -8,7 +8,7 @@ import { GlobalWorkerOptions } from "pdfjs-dist/build/pdf";
 GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`;
 
 const Messagepdf = () => {
-  const [selectedPDFIndex, setSelectedPDFIndex] = useState(null);
+  const [selectedPDFIndex, setSelectedPDFIndex] = useState(0);
 
   // List of images and corresponding PDF paths
   const pdfData = [
@@ -27,40 +27,45 @@ const Messagepdf = () => {
 
   const handleNextImage = () => {
     setSelectedPDFIndex((prevIndex) =>
-      prevIndex !== null
-        ? prevIndex < pdfData.length - 1
-          ? prevIndex + 1
-          : 0
-        : 0
+      prevIndex < pdfData.length - 1 ? prevIndex + 1 : 0
     );
   };
 
   const handlePreviousImage = () => {
     setSelectedPDFIndex((prevIndex) =>
-      prevIndex !== null
-        ? prevIndex > 0
-          ? prevIndex - 1
-          : pdfData.length - 1
-        : pdfData.length - 1
+      prevIndex > 0 ? prevIndex - 1 : pdfData.length - 1
     );
   };
 
   return (
     <div className="message-pdf">
-      <h1>PDF Viewer</h1>
+      <h1>PDF VIEWER</h1>
       <div {...handlers} className="image-container">
-        <div className="image-grid">
+        <button className="arrow-btn left" onClick={handlePreviousImage}>
+          &#10094;
+        </button>
+
+        <div
+          className="image-grid"
+          style={{
+            transform: `translateX(${-selectedPDFIndex * 220}px)`, // Dynamically move images
+          }}
+        >
           {pdfData.map((item, index) => (
-            <div key={index} className="image-item" onClick={() => setSelectedPDFIndex(index)}>
-              <img
-                src={item.imgSrc}
-                alt={`PDF ${index + 1}`}
-                className="pdf-image"
-              />
+            <div
+              key={index}
+              className={`image-item ${index === selectedPDFIndex ? "selected" : ""}`}
+              onClick={() => setSelectedPDFIndex(index)}
+            >
+              <img src={item.imgSrc} alt={`PDF ${index + 1}`} className="pdf-image" />
               <div className="image-overlay">{item.text}</div>
             </div>
           ))}
         </div>
+
+        <button className="arrow-btn right" onClick={handleNextImage}>
+          &#10095;
+        </button>
       </div>
 
       {selectedPDFIndex !== null && (
