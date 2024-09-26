@@ -47,6 +47,6 @@
     ]
   },
   "engines": {
-    "node": "16.x" // Specify your desired Node.js version
+    "node": "16.x"
   }
 }
