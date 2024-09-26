@@ -3,6 +3,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import MapLink from './MapLink';
 import YoutubeVideos from './YoutubeVideos';
 import Banner from './Banner';
+import Messagepdf from './messagepdf';
+
 
 function Home() {
     const [isReadMore, setIsReadMore] = useState(false);
@@ -17,9 +19,9 @@ function Home() {
                 <Banner />
             </div> 
 
-            <div className="Chairmans-Message">
-    <img src="sliding/GM_3.jpg" alt="Chairman'sPic" className="ChairmansPic" />
-    <div className="text-overlay">
+            {/* <div className="Chairmans-Message">
+    <img src="sliding/GM_3.jpg" alt="Chairman'sPic" className="ChairmansPic" /> */}
+    {/* <div className="text-overlay">
         <h4>Bro. Samuel Mories (M.B.A., M.Th.)</h4>
         <p>Associate Pastor</p>
         <p>
@@ -34,13 +36,35 @@ function Home() {
         <button onClick={toggleReadMore} className="read-more-button">
             {isReadMore ? 'Read Less' : 'Read More'}
         </button>
-    </div>
-</div>
+    </div> */}
+
+<div className="WhoWeAreContainer">
+            <div className="textContainer">
+            <img src="sliding/GM_3.jpg" alt="Medical Services" className="mainImage" />
+             <div className="textOverlay">
+             <h1 className="OurServicesH1Text">Bro. Samuel Mories (M.B.A., M.Th.)</h1>
+             <p>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Bro. Samuel Mories serves as the dedicated Associate Pastor at Golgotha Ministries in Armoor. With a strong academic foundation holding both an M.B.A. and a Master of Theology (M.Th.), Bro. Samuel brings a unique blend of spiritual insight and organizational leadership to the ministry. His passion for sharing the Gospel and commitment to serving the local community have been instrumental in the growth and impact of the church.
+
+            
+                <span>
+                    Bro. Samuel Mories serves as the dedicated Associate Pastor at Golgotha Ministries in Armoor. With a strong academic foundation holding both an M.B.A. and a Master of Theology (M.Th.), Bro. Samuel brings a unique blend of spiritual insight and organizational leadership to the ministry. His passion for sharing the Gospel and commitment to serving the local community have been instrumental in the growth and impact of the church. At Golgotha Ministries, Bro. Samuel focuses on nurturing spiritual growth, guiding discipleship programs, and supporting the vision of the church through pastoral care. His heart for service extends beyond the church walls, as he actively engages with outreach initiatives aimed at uplifting the underprivileged and spreading the message of Christ’s love. In addition to his pastoral duties, Bro. Samuel also leverages his business acumen to ensure that the church’s ministries are efficiently managed, allowing the church to thrive and meet the needs of its congregation and community. He continues to inspire and lead with humility, dedication, and unwavering faith in God’s plan.
+                </span>
+        </p>
+                 </div>
+              </div>
+         </div>
+
 
 
             <div>
                 <YoutubeVideos/>
             </div>
+
+            <div>
+                <Messagepdf />
+            </div>
+
             <div>
                 <MapLink />
             </div>

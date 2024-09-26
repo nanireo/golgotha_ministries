@@ -92,6 +92,8 @@
     width: 100%;
     height: auto;
     background-color: lightred; /* Set light red background */
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
   .textContainer {
@@ -105,12 +107,14 @@
   
   .textOverlay {
     position: absolute;
-    top: 10%;
-    left: 5%;
-    background-color: white; /* White background for the text */
-    color: black; /* Black text color */
-    padding: 10px;
-    max-width: 50%;
+    top: 5%;
+    left: 50%;
+    background: linear-gradient(rgba(13, 14, 44, 0.7), rgba(255, 8, 8, 0.5)); /* Gradient background */
+    color: rgb(255, 255, 255); /* Black text color */
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 50;
+    text-align: justify;
     border-radius: 3%;
   }
   

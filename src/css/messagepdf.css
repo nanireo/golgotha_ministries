@@ -1,0 +1,78 @@
+.message-pdf {
+    text-align: center;
+    margin: 20px;
+    background: linear-gradient(135deg, #f06, #f90); /* Gradient background */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Optional: rounded corners for aesthetics */
+}
+
+.image-container {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.image-grid {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 10px; /* Space between images */
+    transition: transform 0.3s ease; /* Smooth transition when scrolling */
+}
+
+.image-item {
+    position: relative;
+    width: 200px; /* Set a fixed width for images */
+    cursor: pointer;
+}
+
+.pdf-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 9 / 19; /* Maintain 9:19 aspect ratio */
+    object-fit: cover; /* Cover the entire area */
+    transition: transform 0.2s ease;
+}
+
+.pdf-image:hover {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.pdf-viewer {
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    position: relative;
+}
+
+.close-btn {
+    position: relative; /* Positioned inside the viewer */
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
