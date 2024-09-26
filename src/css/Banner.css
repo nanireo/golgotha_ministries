@@ -35,12 +35,31 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker for better contrast */
     color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
+    text-align: left; /* Align text to the left for better readability */
+    padding: 15px; /* Increase padding for more space */
+    font-size: 16px; /* Base font size */
+    max-height: 150px; /* Limit height to avoid overflow */
+    overflow-y: auto; /* Allow scrolling if text overflows */
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
 }
+
+/* Optional: Adjust font size for smaller screens */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 14px; /* Smaller font size for smaller screens */
+        max-height: 100px; /* Reduce max height */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        font-size: 12px; /* Even smaller font size */
+        padding: 10px; /* Less padding on smaller screens */
+    }
+}
+
 
 .prev, .next {
     cursor: pointer;

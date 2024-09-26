@@ -38,7 +38,7 @@ function Home() {
         </button>
     </div> */}
 
-<div className="WhoWeAreContainer">
+{/* <div className="WhoWeAreContainer">
             <div className="textContainer">
             <img src="sliding/GM_3.jpg" alt="Medical Services" className="mainImage" />
              <div className="textOverlay">
@@ -53,7 +53,7 @@ function Home() {
         </p>
                  </div>
               </div>
-         </div>
+         </div> */}
 
 
 
