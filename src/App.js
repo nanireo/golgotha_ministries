@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 import './css/Header.css';
 import './css/Banner.css';
@@ -23,7 +25,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Home" element={<Home />} />
-                    <Route path="/ContactUs" element={<ContactUs />} /> {/* This should work now */}
+                    <Route path="/ContactUs" element={<ContactUs />} />
                 </Routes>
                 <Footer />
             </Router>
