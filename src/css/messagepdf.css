@@ -8,27 +8,21 @@
 
 .image-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
+    flex-wrap: wrap; /* Ensure the items wrap in a grid-like structure */
     width: 100%;
-    max-width: 100%;
 }
 
 .image-grid {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    scroll-snap-type: x mandatory; /* Enable scroll snapping */
-    -webkit-overflow-scrolling: touch;
-    overflow-x: scroll;
-    width: 100%;
+    gap: 15px; /* Add spacing between items */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the images */
 }
 
 .image-item {
     position: relative;
     width: 200px;
-    scroll-snap-align: center; /* Snap images to the center */
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
 }

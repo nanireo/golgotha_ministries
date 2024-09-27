@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useSwipeable } from "react-swipeable";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { GlobalWorkerOptions } from "pdfjs-dist/build/pdf";
@@ -8,7 +7,7 @@ import { GlobalWorkerOptions } from "pdfjs-dist/build/pdf";
 GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`;
 
 const Messagepdf = () => {
-  const [selectedPDFIndex, setSelectedPDFIndex] = useState(0);
+  const [selectedPDFIndex, setSelectedPDFIndex] = useState(null);
 
   // List of images and corresponding PDF paths
   const pdfData = [
@@ -18,26 +17,11 @@ const Messagepdf = () => {
     { imgSrc: "pics/pdf4.jpg", pdfSrc: "pdf/THE HOLY SPIRIT EMPOWERS EVANGELISM_2.pdf", text: "Holy Spirit Empowerment" },
   ];
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => handleNextImage(),
-    onSwipedRight: () => handlePreviousImage(),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-  });
-
-  const handleNextImage = () => {
-    setSelectedPDFIndex((prevIndex) => (prevIndex < pdfData.length - 1 ? prevIndex + 1 : 0));
-  };
-
-  const handlePreviousImage = () => {
-    setSelectedPDFIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : pdfData.length - 1));
-  };
-
   return (
     <div className="message-pdf">
       <h1>PDF VIEWER</h1>
-      <div {...handlers} className="image-container">
-        <div className="image-grid" style={{ transform: `translateX(-${selectedPDFIndex * 200}px)` }}>
+      <div className="image-container">
+        <div className="image-grid">
           {pdfData.map((item, index) => (
             <div
               key={index}
