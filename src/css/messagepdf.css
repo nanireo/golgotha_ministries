@@ -19,11 +19,15 @@
     color: #f90;
 }
 
+/* Adjust padding to reduce the gap between images */
+.slick-slide {
+}
+
 .image-item {
     position: relative;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
-     /* Adjusts the gap between images */
+    margin: 0 5px; /* Adds small margin to control the gap between images */
 }
 
 .image-item.selected {
@@ -34,46 +38,10 @@
 .pdf-image {
     width: 100%;
     height: auto;
-    aspect-ratio: 9 / 16; /* Enforces 9:16 aspect ratio for the image */
+    aspect-ratio: 9 / 16;
     object-fit: cover;
     border-radius: 10px;
     position: relative;
-}
-
-/* Overlay text with a background color exactly matching the 9:16 aspect ratio */
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    color: white;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px; /* Matches the image's rounded corners */
-    aspect-ratio: 9 / 16; /* Ensures the overlay has the same 9:16 ratio */
-    transition: background-color 0.2s ease;
-}
-
-/* Darkens overlay on hover */
-.image-item:hover .image-overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* Darkens the overlay on hover */
-}
-
-/* Ensures text fits perfectly inside the 9:16 aspect ratio */
-.image-overlay > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 10px;
-    aspect-ratio: 9 / 16; /* Ensures text and background remain within the 9:16 ratio */
 }
 
 .close-btn,
@@ -98,12 +66,12 @@
 
 @media (max-width: 720px) {
     .slick-slide {
-        padding: 0 5px; /* Reduce padding for smaller screens */
+        padding: 0 3px; /* Slightly reduce padding for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .slick-slide {
-        padding: 0 5px; /* Reduce padding for smallest screens */
+        padding: 0 2px; /* Further reduce padding for the smallest screens */
     }
 }

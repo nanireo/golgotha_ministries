@@ -14,10 +14,10 @@ const Messagepdf = () => {
 
   // List of images and corresponding PDF paths
   const pdfData = [
-    { imgSrc: "pics/pdf.jpg", pdfSrc: "pdf/BOLDNESS IN EVANGELISM_3.pdf", text: "Boldness in  Evangelism" },
-    { imgSrc: "pics/pdf1.jpg", pdfSrc: "pdf/PERSONAL TESTIMONIES IN EVANGELISM_4.pdf", text: "Personal Testimonies" },
-    { imgSrc: "pics/pdf3.jpeg", pdfSrc: "pdf/The Great Commission_1.pdf", text: "The Great Commission" },
-    { imgSrc: "pics/pdf4.jpg", pdfSrc: "pdf/THE HOLY SPIRIT EMPOWERS EVANGELISM_2.pdf", text: "Holy Spirit Empowerment" },
+    { imgSrc: "pics/pdf.jpg", pdfSrc: "pdf/BOLDNESS IN EVANGELISM_3.pdf" },
+    { imgSrc: "pics/pdf1.jpg", pdfSrc: "pdf/PERSONAL TESTIMONIES IN EVANGELISM_4.pdf" },
+    { imgSrc: "pics/pdf3.jpeg", pdfSrc: "pdf/The Great Commission_1.pdf" },
+    { imgSrc: "pics/pdf4.jpg", pdfSrc: "pdf/THE HOLY SPIRIT EMPOWERS EVANGELISM_2.pdf" },
   ];
 
   // Slider settings for react-slick
@@ -27,8 +27,8 @@ const Messagepdf = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true, // Centers the active image
-    centerPadding: '0px', // No extra padding around images
+    centerMode: true,
+    centerPadding: '0px',
     responsive: [
       {
         breakpoint: 720,
@@ -59,7 +59,6 @@ const Messagepdf = () => {
               onClick={() => setSelectedPDFIndex(index)}
             >
               <img src={item.imgSrc} alt={`PDF ${index + 1}`} className="pdf-image" />
-              <div className="image-overlay">{item.text}</div>
             </div>
           ))}
         </Slider>
