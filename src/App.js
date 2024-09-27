@@ -12,7 +12,6 @@ import './css/messagepdf.css'
 
 import Header from './components/Header';
 import Home from './components/Home';
-
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 
@@ -23,11 +22,8 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/Home" element={<Home />} /> {/* Assuming you have a Home component */}
-                    <Route path="/ContactUs" element={<ContactUs />} />
-                    <Route path="/golgotha-ministries.onrender.com/Home" element={<Home />} />
-                    <Route path="/golgotha-ministries.onrender.com/ContactUs" element={<ContactUs />} />
-
+                    <Route path="/Home" element={<Home />} />
+                    <Route path="/ContactUs" element={<ContactUs />} /> {/* This should work now */}
                 </Routes>
                 <Footer />
             </Router>
@@ -36,44 +32,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import './css/Header.css';
-// import './css/Banner.css';
-// import './css/Footer.css';
-// import './css/Home.css';
-// import './css/HomeDoctorProfile.css';
-// import './css/YoutubeVideos.css'; // Optional CSS for styling
-// import './css/ContactUs.css'; // Optional CSS for styling
-
-
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-// import ContactUs from './components/ContactUs';
-
-
-// function App() {
-//     return (
-//         <div className="App">
-//             <Header />
-            
-//             <ContactUs />
-
-//             <Footer />
-
-//         </div>
-//     );
-// }
-
-// export default App;
