@@ -7,6 +7,7 @@
 
 .image-container {
     width: 80%;
+    margin: 0 auto; /* Center the slider container */
 }
 
 .slick-prev,
@@ -19,15 +20,15 @@
     color: #f90;
 }
 
-/* Adjust padding to reduce the gap between images */
+/* Remove padding and margin to eliminate gaps */
 .slick-slide {
+    padding: 0;
 }
 
 .image-item {
-    position: relative;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
-    margin: 0 5px; /* Adds small margin to control the gap between images */
+    margin: 0; /* Remove the margin between images */
 }
 
 .image-item.selected {
@@ -66,12 +67,12 @@
 
 @media (max-width: 720px) {
     .slick-slide {
-        padding: 0; /* Slightly reduce padding for smaller screens */
+        padding: 0; /* Ensure no padding on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .slick-slide {
-        padding: 0; /* Further reduce padding for the smallest screens */
+        padding: 0; /* Ensure no padding on the smallest screens */
     }
 }
