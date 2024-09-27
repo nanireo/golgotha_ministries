@@ -35,45 +35,17 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker for better contrast */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    text-align: left; /* Align text to the left for better readability */
-    padding: 15px; /* Increase padding for more space */
-    font-size: 16px; /* Base font size */
-    max-height: 150px; /* Limit height to avoid overflow */
-    overflow-y: auto; /* Allow scrolling if text overflows */
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Optional: Adjust font size for smaller screens */
-@media (max-width: 768px) {
-    .caption {
-        font-size: 14px; /* Smaller font size for smaller screens */
-        max-height: 100px; /* Reduce max height */
-    }
-
-    .prev, .next {
-        width: 35px; /* Smaller buttons for smaller screens */
-        height: 35px;
-        font-size: 16px; /* Smaller font size */
-        padding: 8px; /* Less padding */
-    }
-}
-
-@media (max-width: 480px) {
-    .caption {
-        font-size: 12px; /* Even smaller font size */
-        padding: 10px; /* Less padding on smaller screens */
-    }
-
-    .prev, .next {
-        width: 30px; /* Smaller buttons for mobile */
-        height: 30px;
-        font-size: 14px; /* Smaller font size */
-        padding: 5px; /* Less padding */
-    }
-}
-
+/* Arrows (prev and next) */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -99,11 +71,57 @@
 }
 
 .next {
-    right: 30px;
+    right: 10px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-y: auto; /* Ensure the page is scrollable */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .banner {
+        height: 400px; /* Adjust the height for tablet screens */
+    }
+
+    .caption {
+        font-size: 14px;
+        max-height: 120px;
+    }
+
+    .prev, .next {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 350px;
+    }
+
+    .caption {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .prev, .next {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 250px;
+    }
+
+    .caption {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .prev, .next {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
 }
