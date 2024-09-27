@@ -2,29 +2,28 @@
     text-align: center;
     margin-top: 20px;
     background: linear-gradient(135deg, rgb(37, 34, 119), #f90);
-    padding: 20px;
     position: relative;
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Ensure the items wrap in a grid-like structure */
-    width: 100%;
+    width: 80%;
 }
 
-.image-grid {
-    display: flex;
-    gap: 15px; /* Add spacing between items */
-    flex-wrap: wrap;
-    justify-content: center; /* Center the images */
+.slick-prev,
+.slick-next {
+    color: #f90;
+    font-size: 30px;
+}
+
+.slick-dots li button:before {
+    color: #f90;
 }
 
 .image-item {
     position: relative;
-    width: 200px;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
+     /* Adjusts the gap between images */
 }
 
 .image-item.selected {
@@ -35,21 +34,46 @@
 .pdf-image {
     width: 100%;
     height: auto;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 9 / 16; /* Enforces 9:16 aspect ratio for the image */
     object-fit: cover;
     border-radius: 10px;
+    position: relative;
 }
 
+/* Overlay text with a background color exactly matching the 9:16 aspect ratio */
 .image-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
     color: white;
     text-align: center;
-    padding: 10px;
     font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Matches the image's rounded corners */
+    aspect-ratio: 9 / 16; /* Ensures the overlay has the same 9:16 ratio */
+    transition: background-color 0.2s ease;
+}
+
+/* Darkens overlay on hover */
+.image-item:hover .image-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Darkens the overlay on hover */
+}
+
+/* Ensures text fits perfectly inside the 9:16 aspect ratio */
+.image-overlay > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    aspect-ratio: 9 / 16; /* Ensures text and background remain within the 9:16 ratio */
 }
 
 .close-btn,
@@ -73,21 +97,13 @@
 }
 
 @media (max-width: 720px) {
-    .image-item {
-        width: 150px;
+    .slick-slide {
+        padding: 0 5px; /* Reduce padding for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .image-item {
-        width: 120px;
-    }
-
-    .pdf-viewer {
-        padding: 10px;
-    }
-
-    .pdf-image {
-        aspect-ratio: 9 / 16;
+    .slick-slide {
+        padding: 0 5px; /* Reduce padding for smallest screens */
     }
 }
