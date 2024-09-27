@@ -6,19 +6,16 @@
   /* border-radius: 15px; Rounded shape for the whole container 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth 
 } */
-
+/* Default styling for larger screens */
 .youtube-video-container {
   max-width: 100%;
-  margin-top: 20px;
-
   margin: 0 auto;
   padding: 20px;
   background: linear-gradient(135deg, rgb(93, 65, 76), #4a90e2); /* Linear gradient */
-  /* border-radius: 15px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.youtube-video-container  h1{
+.youtube-video-container h1 {
   color: #ffffff;
   size: 50px;
 }
@@ -35,10 +32,9 @@
 .featured-video-wrapper {
   flex: 2;
   margin-right: 10px;
-  /* background-color: #ffffff; Background color for the featured video */
-  border-radius: 15px; /* Rounded corners for featured video */
-  overflow: hidden; /* Ensures the round shape clips the video */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the video */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .small-videos-wrapper {
@@ -49,14 +45,13 @@
 
 .video-wrapper {
   margin-bottom: 10px;
-  /* background-color: #ffffff; Background color for the smaller videos */
-  border-radius: 10px; /* Rounded corners for smaller videos */
-  overflow: hidden; /* Clips the corners to match the rounded shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for small videos */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 iframe {
-  border-radius: 15px; /* Ensures videos fit the rounded container */
+  border-radius: 15px;
 }
 
 .subscribe-button-container {
@@ -76,7 +71,7 @@ iframe {
 
 .show-more-btn {
   margin-top: 20px;
-  background: linear-gradient(135deg, rgb(255, 18, 113), #000000); /* Linear gradient */
+  background: linear-gradient(135deg, rgb(255, 18, 113), #000000);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -91,4 +86,81 @@ iframe {
 
 .youtube-icon {
   margin-right: 8px;
+}
+
+/* Media query for screens 720px and below */
+@media (max-width: 720px) {
+  .video-row {
+    flex-direction: column;
+  }
+
+  .featured-video-wrapper {
+    flex: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .small-videos-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .video-wrapper {
+    flex: 1 1 48%;
+    margin-right: 0;
+  }
+
+  .youtube-video-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .subscribe-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .show-more-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Media query for screens 480px and below */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .video-row {
+    flex-direction: column;
+  }
+
+  .featured-video-wrapper,
+  .small-videos-wrapper {
+    flex: none;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .youtube-video-container {
+    padding: 5px;
+  }
+
+  .subscribe-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .show-more-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }

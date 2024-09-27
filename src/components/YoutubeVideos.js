@@ -9,7 +9,7 @@ const YoutubeChannelVideos = () => {
   const [videosLimit, setVideosLimit] = useState(3);
   const [showMoreVideos, setShowMoreVideos] = useState(false);
 
-  const apiKey = 'AIzaSyB3EWcK--EJPKC94Br_QDnuhK4kNE5q7XQ'; // Replace with your API key
+  const apiKey = 'AIzaSyDwik4Q41czZQPe0ke6zcIHFW6Wu7YmnIU'; // Replace with your API key
   const channelId = 'UCUvqZ3JiWs4Aj4AhK2062xQ'; // Replace with your channel ID
 
   useEffect(() => {

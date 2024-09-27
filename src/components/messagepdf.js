@@ -26,31 +26,18 @@ const Messagepdf = () => {
   });
 
   const handleNextImage = () => {
-    setSelectedPDFIndex((prevIndex) =>
-      prevIndex < pdfData.length - 1 ? prevIndex + 1 : 0
-    );
+    setSelectedPDFIndex((prevIndex) => (prevIndex < pdfData.length - 1 ? prevIndex + 1 : 0));
   };
 
   const handlePreviousImage = () => {
-    setSelectedPDFIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : pdfData.length - 1
-    );
+    setSelectedPDFIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : pdfData.length - 1));
   };
 
   return (
     <div className="message-pdf">
       <h1>PDF VIEWER</h1>
       <div {...handlers} className="image-container">
-        <button className="arrow-btn left" onClick={handlePreviousImage}>
-          &#10094;
-        </button>
-
-        <div
-          className="image-grid"
-          style={{
-            transform: `translateX(${-selectedPDFIndex * 220}px)`, // Dynamically move images
-          }}
-        >
+        <div className="image-grid" style={{ transform: `translateX(-${selectedPDFIndex * 200}px)` }}>
           {pdfData.map((item, index) => (
             <div
               key={index}
@@ -62,10 +49,6 @@ const Messagepdf = () => {
             </div>
           ))}
         </div>
-
-        <button className="arrow-btn right" onClick={handleNextImage}>
-          &#10095;
-        </button>
       </div>
 
       {selectedPDFIndex !== null && (
@@ -74,7 +57,6 @@ const Messagepdf = () => {
             <button className="close-btn" onClick={() => setSelectedPDFIndex(null)}>
               Close PDF
             </button>
-            {/* Download Button */}
             <a
               href={pdfData[selectedPDFIndex].pdfSrc}
               download
