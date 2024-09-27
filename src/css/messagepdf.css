@@ -66,12 +66,12 @@
 
 @media (max-width: 720px) {
     .slick-slide {
-        padding: 0 3px; /* Slightly reduce padding for smaller screens */
+        padding: 0; /* Slightly reduce padding for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .slick-slide {
-        padding: 0 2px; /* Further reduce padding for the smallest screens */
+        padding: 0; /* Further reduce padding for the smallest screens */
     }
 }
