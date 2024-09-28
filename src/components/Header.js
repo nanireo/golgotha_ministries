@@ -33,7 +33,7 @@ function Header() {
                         <li><a href="#contact">Our Branches</a></li>
                         <li><a href="#departments">Vision</a></li>
                         <li><a href="#academics">Downloads</a></li>
-                        <li><a href="/ContactUs">Contact Us</a></li>
+                        <li><a href="#/ContactUs">Contact Us</a></li>
                     </ul>
                 </nav>
             </header>

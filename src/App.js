@@ -1,7 +1,5 @@
 import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-
 
 import './css/Header.css';
 import './css/Banner.css';
@@ -10,7 +8,7 @@ import './css/Home.css';
 import './css/HomeDoctorProfile.css';
 import './css/YoutubeVideos.css'; // Import the CSS
 import './css/ContactUs.css'; // Optional CSS for styling
-import './css/messagepdf.css'
+import './css/messagepdf.css';
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -26,8 +24,6 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/Home" element={<Home />} />
                     <Route path="/ContactUs" element={<ContactUs />} />
-                    <Route path="/https://golgotha-ministries.onrender.com/#/ContactUs" element={<ContactUs />} />
-
                 </Routes>
                 <Footer />
             </Router>
