@@ -7,7 +7,6 @@ body {
 .nav-links {
     background-color: #003366;
     color: #fff;
-    padding: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -51,7 +50,7 @@ nav ul li {
     margin: 0 5px;
 }
 
-nav ul li a {
+nav ul a {
     color: #fff;
     text-decoration: none;
     padding: 5px;
@@ -59,29 +58,44 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul a:hover {
     background-color: #ff3232;
     color: #fff;
 }
-
-/* Add a line between menu items */
-/* nav ul li {
-    padding: 10px 0;
-} */
 
 /* Responsive Design */
 .menu-icon {
     display: none;
     cursor: pointer;
     color: #003366;
-    
 }
 
 .nav-links.open {
     display: block;
 }
 
+/* Style for the HeaderP class in links */
+.HeaderP {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.HeaderP:hover {
+    background-color: #ff3232;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsive */
 @media screen and (max-width: 720px) {
+    .HeaderP {
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -90,9 +104,8 @@ nav ul li a:hover {
         top: 140px;
         right: 0;
         width: 100%;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
+        padding: 0; /* Remove extra padding */
+        
     }
 
     .nav-links.open {
@@ -105,34 +118,35 @@ nav ul li a:hover {
 
     nav ul {
         flex-direction: column;
+        margin: 0; /* Remove margin */
     }
 
     nav ul li {
-        width: 100%;
-        margin: 10px 0;
+        margin: 0; /* Remove margin between items */
+        padding: 10px 0; /* Add padding for spacing */
+        border-bottom: 1px solid #fff; /* Optional: Line between items */
     }
 
     nav ul li:last-child {
-        border-bottom: none; /* Remove line for the last item */
+        border-bottom: none;
     }
 }
 
-/* Media query for 480px screens */
 @media screen and (max-width: 480px) {
     .logo img {
-        max-height: 80px; /* Adjust logo size for smaller screens */
+        max-height: 80px;
     }
 
     .college-info h1 {
-        font-size: 30px; /* Adjust font size for smaller screens */
+        font-size: 30px;
     }
 
     .nav-links {
-        top: 120px; /* Adjust the position for smaller screens */
+        top: 120px;
+        padding: 0; /* Remove extra padding */
     }
 
     nav ul li {
-        padding: 15px 0; /* Increase padding between menu items */
+        padding: 15px 0;
     }
 }
-

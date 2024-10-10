@@ -1,11 +1,15 @@
 import React from 'react';
+import ContactForm from './Contactform';
+
+
 
 const ContactUs = () => {
   return (
+    <main>
     <div className="contact-container">
       <h2>Contact Us</h2>
 
-      <div className="contact-info">
+      <div className="contact-infob">
         <div className="info-item">
           <h3>Church Name:</h3>
           <p>Golgotha Church</p>
@@ -31,7 +35,14 @@ const ContactUs = () => {
           <p><a href="https://maps.app.goo.gl/mDJjv5AEaU9taGhd7" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
         </div>
       </div>
+
+      
     </div>
+    <div>
+                <ContactForm />
+            </div> 
+    </main>
+    
   );
 };
 
