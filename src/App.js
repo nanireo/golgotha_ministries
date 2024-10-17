@@ -27,7 +27,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/Home" element={<Home />} />
                     <Route path="/ContactUs" element={<ContactUs />} />
-                    <Route path="/https://golgotha-ministries.onrender.com/ContactUs" element={<ContactUs />} />
+                    <Route path="/golgotha-ministries.onrender.com/ContactUs" element={<ContactUs />} />
 
                 </Routes>
                 <Footer />
