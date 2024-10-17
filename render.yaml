@@ -5,3 +5,7 @@ static:
     - source: /.*
       destination: /index.html
       status: 200
+redirects:
+  - source: /.*
+    destination: /index.html
+    status: 200
