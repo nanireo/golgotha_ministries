@@ -12,6 +12,8 @@ import './css/YoutubeVideos.css'; // Import the CSS
 import './css/ContactUs.css'; // Optional CSS for styling
 import './css/messagepdf.css';
 import './css/Contactform.css';
+import './css/GoogleForms.css';
+
 
 import Header from './components/Header';
 import Home from './components/Home';
