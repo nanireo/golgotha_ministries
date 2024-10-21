@@ -25,17 +25,25 @@
   }
   
   /* Modal styles */
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    max-width: 90%;
-    max-height: 90%;
-    outline: none;
-    z-index: 2000; /* Higher than the header's z-index */
-  }
+  /* Modal styles for desktop */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  outline: none;
+  z-index: 2000;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  flex-grow: 1; /* Allow image to take available space */
+}
   
   .modal-content {
     display: flex;
@@ -54,13 +62,6 @@
   
   .arrow-button:hover {
     color: #ff6666; /* Optional hover color change */
-  }
-  
-  .modal-image {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    flex-grow: 1; /* Allow image to take available space */
   }
   
   .overlay {
@@ -89,51 +90,83 @@
     background-color: #ff6666; /* Optional hover color change */
     border-radius: 1000px;
   }
-  
-  /* Mobile view adjustments */
+
+
+ /* Mobile view adjustments */
 @media screen and (max-width: 720px) {
-    .image-grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-  
-    .modal {
-      /* Full-screen style already applied */
-    }
-  
-    .modal-image {
-      max-height: 70vh; /* Adjust image height for mobile */
-    }
-  
-    .arrow-button {
-      font-size: 2.5rem; /* Smaller arrow buttons for mobile */
-      padding: 10px; /* Adjust padding for better touch accessibility */
-    }
-  
-    .close-buttonimg {
-      top: 15px; /* Adjust close button position for mobile */
-      right: 20px; /* Adjust close button position for mobile */
-      font-size: 1.5rem; /* Smaller close button for mobile */
-    }
+  .modal {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    transform: none; /* Remove centering */
   }
-  
-  @media screen and (max-width: 480px) {
-    .image-grid {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-  
-    .modal {
-      /* Full-screen style already applied */
-    }
-  
-    .modal-image {
-      max-height: 100%; /* Allow image to take full height on very small screens */
-    }
-  
-    .arrow-button {
-      font-size: 2rem; /* Even smaller arrow buttons for very small screens */
-    }
-  
-    .close-buttonimg {
-      font-size: 1.2rem; /* Smaller close button for very small screens */
-    }
+
+  .modal-content {
+    position: relative;
+    flex-direction: column; /* Stack elements vertically for mobile */
   }
+
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 100vh; /* Full screen on mobile */
+  }
+
+  .arrow-button {
+    font-size: 2.5rem; /* Smaller arrow buttons for mobile */
+    position: absolute;
+    bottom: 10px; /* Position arrows at the bottom */
+    z-index: 2001;
+  }
+
+  /* Left arrow positioning */
+  .arrow-button:first-child {
+    left: 30%; /* Center it horizontally */
+  }
+
+  /* Right arrow positioning */
+  .arrow-button:last-child {
+    right: 30%; /* Center it horizontally */
+  }
+
+  .close-buttonimg {
+    top: 10px;
+    right: 10px;
+    font-size: 2rem; /* Adjust close button size for mobile */
+  }
+}
+
+/* For very small screens (like phones) */
+@media screen and (max-width: 480px) {
+  .modal {
+    /* Already full-screen on mobile */
+  }
+
+  .modal-image {
+    max-height: 100vh; /* Allow image to take full screen on very small screens */
+  }
+
+  .arrow-button {
+    font-size: 2rem; /* Even smaller arrow buttons for very small screens */
+    bottom: 5px; /* Adjust positioning closer to the bottom for very small screens */
+  }
+
+  /* Left arrow positioning */
+  .arrow-button:first-child {
+    left: 25%; /* Center it horizontally on very small screens */
+  }
+
+  /* Right arrow positioning */
+  .arrow-button:last-child {
+    right: 25%; /* Center it horizontally on very small screens */
+  }
+
+  .close-buttonimg {
+    font-size: 1.5rem; /* Smaller close button for very small screens */
+  }
+}
