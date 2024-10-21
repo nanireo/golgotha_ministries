@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
 // No need for hash-based routing now
 
 import './css/Header.css';
@@ -30,7 +31,7 @@ function App() {
                     <Route path="/Home" element={<Home />} />
                     <Route path="/ContactUs" element={<ContactUs />} />
                 </Routes>
-
+                
                 <Footer />
             </Router>
         </div>
