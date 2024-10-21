@@ -1,92 +1,65 @@
- 
-
-.about-content-section {
+.about-us-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
     background-color: #f9f9f9;
 }
 
-/* Main container for the image */
-.about-image-section {
-    width: 100vw;
-    height: 105vh;
-    overflow: hidden;
-    position: relative;
-    
+.about-us-image {
+    max-width: 400px;
+    margin-right: 20px; /* Adds space between the image and the text */
 }
 
-
-
-.about-image-section img {
+.about-us-image img {
     width: 100%;
-     
+    height: auto;
+    border-radius: 10px;
 }
 
-.about-text {
-    max-width: 800px;
-    text-align: center;
- }
+.about-us-content {
+    max-width: 600px;
+    text-align: left;
+}
 
-/* Responsive Design for Tablets */
+.about-us-content h1, .about-us-content h2 {
+    margin: 10px 0;
+}
+
+.about-us-content p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .about-content-section {
+    .about-us-container {
+        flex-direction: column;
         padding: 10px;
     }
 
-    .about-text {
-        margin-bottom: 0;
+    .about-us-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-us-content {
+        text-align: center;
+        max-width: 100%;
     }
 }
 
-/* Responsive Design for Mobile */
 @media (max-width: 480px) {
-    .about-image-section {
-        height: 80vh;  /* Adjust height for mobile */
-     }
-
-    .about-content-section {
-        margin-top: 0;
-        padding-top: 0;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Main container for the image */
-
-
-/* Text content container */
-/* 
-
-
-
-
-/* Responsive Design for Mobile 
-@media (max-width: 480px) {
-    .about-text h1 {
+    .about-us-content h1 {
         font-size: 24px;
-        margin: 5px 0;
     }
 
-    .about-text h2 {
+    .about-us-content h2 {
         font-size: 20px;
-        margin: 5px 0;
     }
 
-    .about-text p {
+    .about-us-content p {
         font-size: 16px;
     }
-
-    .about-image-section {
-        height: 80vh; /* Adjust height for smaller screens 
-    }
-} */
+}
