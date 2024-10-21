@@ -139,7 +139,7 @@
     right: 10px;
     font-size: 2rem; /* Adjust close button size for mobile */
   }
-}
+} 
 
 /* For very small screens (like phones) */
 @media screen and (max-width: 480px) {
