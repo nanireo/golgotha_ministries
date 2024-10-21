@@ -8,7 +8,7 @@ function Banner() {
         { src: "sliding/GM_2.jpg", caption: "Golgotha Ministries Armoor" },
         { src: "sliding/GM_3.jpg", caption: "Golgotha Ministries Armoor" },
         { src: "sliding/GM_4.jpg", caption: "Golgotha Ministries Armoor" },
-        // { src: "sliding/bmcs5.jpg", caption: "Welcome to Bhaskar Medical College & General Hospital" },
+        { src: "church pics/14 c 2.jpeg", caption: "Golgotha Ministries Armoor"}
         // { src: "sliding/bmcs6.jpg", caption: "Welcome to Bhaskar Medical College & General Hospital" }
         // { src: "sliding/bmcs8.JPG", caption: "Welcome to Bhaskar Medical College & General Hospital" }
 
