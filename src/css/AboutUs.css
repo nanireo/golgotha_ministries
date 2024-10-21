@@ -1,0 +1,65 @@
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.about-us-content {
+    max-width: 800px;  /* Limits the width of the text content */
+    text-align: center; /* Centers the text within the container */
+    margin-bottom: 20px;
+}
+
+.about-us-content h1, .about-us-content h2 {
+    margin: 10px 0;
+}
+
+.about-us-content p {
+    line-height: 1.6;  /* Increases readability */
+    margin: 10px 0;
+}
+
+.about-us-image {
+    width: 100vw;              /* Full viewport width */
+    height: 105vh;             /* Adjust height if needed */
+    overflow: hidden;          /* Hides the overflow */
+    position: relative;        /* Positioning context for absolute elements */
+}
+
+.about-us-image img {
+    width: 100%;               /* Full width of the container */
+    height: auto;              /* Maintain aspect ratio */
+    position: absolute;        /* Positioning the image absolutely */
+    bottom: 0;                 /* Aligns the image to the bottom of the container */
+    left: 0;                   /* Aligns the image to the left */
+    object-fit: cover;         /* Ensures the image covers the area without distortion */
+    object-position: bottom;   /* Adjust the focus to keep the bottom of the image visible */
+    border-radius: 10px;      /* Optional: adds rounded corners to the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 10px;     /* Adjusts padding for smaller screens */
+    }
+
+    .about-us-content {
+        margin-bottom: 10px; /* Reduces margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-content h1 {
+        font-size: 24px;    /* Adjusts heading size for smaller screens */
+    }
+
+    .about-us-content h2 {
+        font-size: 20px;    /* Adjusts subheading size */
+    }
+
+    .about-us-content p {
+        font-size: 16px;    /* Adjusts paragraph size */
+    }
+}

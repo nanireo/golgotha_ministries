@@ -33,7 +33,7 @@ function Header() {
                 <nav>
                     <ul>
                         <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'>Home</p></Link> 
-                        <Link to="#about" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link> 
+                        <Link to="/AboutUs" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link> 
                         <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
                         <Link to="#contact" onClick={handleLinkClick}><p className='HeaderP'>Our Branches</p></Link> 
                         <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'>Bible Quiz</p></Link> 

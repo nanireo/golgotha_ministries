@@ -49,8 +49,8 @@ const Messagepdf = () => {
 
   return (
     <div className="message-pdf">
-      <h1>PDF VIEWER</h1>
-      <div className="image-container">
+<h1 style={{ color: 'white' }}>PDF VIEWER</h1>
+<div className="image-container">
         <Slider {...settings}>
           {pdfData.map((item, index) => (
             <div

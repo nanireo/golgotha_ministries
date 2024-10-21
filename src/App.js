@@ -15,6 +15,7 @@ import './css/messagepdf.css';
 import './css/Contactform.css';
 import './css/BibleQuiz.css';
 import './css/ImageGallery.css';
+import './css/AboutUs.css';
 
 
 
@@ -24,6 +25,7 @@ import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 import BibleQuiz from './components/BibleQuiz';
 import ImageGallery from './components/ImageGallery';
+import AboutUs from './components/AboutUs';
 
 
 
@@ -38,7 +40,8 @@ function App() {
                     <Route path="/ContactUs" element={<ContactUs />} />
                     <Route path="/BibleQuiz" element={<BibleQuiz />} />
                     <Route path="/ImageGallery" element={<ImageGallery />} />
-
+                    <Route path="/AboutUs" element={<AboutUs />} />
+                    
                 </Routes>
                 
                 <Footer />
