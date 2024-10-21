@@ -52,7 +52,7 @@ const YoutubeChannelVideos = () => {
 
   return (
     <div className="youtube-video-container">
-      <h1>SAMUEL MORIES ON YOU TUBE</h1>
+      <h1>SAMUEL MORIES ON YouTube</h1>
 
       {/* Subscribe button */}
       <div className="subscribe-button-container">
