@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Importing menu and close icons from react-icons
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleLinkClick = () => {
+        setIsOpen(false); // Close the menu when a link is clicked
     };
 
     return (
@@ -28,22 +32,13 @@ function Header() {
             <header className={`nav-links ${isOpen ? 'open' : ''}`}>
                 <nav>
                     <ul>
-                    <Link to = "/Home"><p class='HeaderP'>Home</p></Link> 
-                    <Link to = "#about"><p class='HeaderP'>About</p></Link> 
-                    <Link to = "/ImageGallery"><p class='HeaderP'>Gallery</p></Link> 
-                    <Link to = "#contact"><p class='HeaderP'>Our Branches</p></Link> 
-                    <Link to = "/BibleQuiz"><p class='HeaderP'>Bible Quiz</p></Link> 
-                    <Link to = "#academics"><p class='HeaderP'>Downloads</p></Link> 
-                    <Link to = "/ContactUs"><p class='HeaderP'>Contact Us</p></Link> 
-
-                        {/* <li><a href="/Home">Home</a></li> */}
-                        {/* <li><a href="#about">About</a></li>
-                        <li><a href="#services">Gallery</a></li>
-                        <li><a href="#contact">Our Branches</a></li>
-                        <li><a href="#departments">Vision</a></li>
-                        <li><a href="#academics">Downloads</a></li> */}
-
-                        {/* <li><a href="/ContactUs">Contact Us</a></li> */}
+                        <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'>Home</p></Link> 
+                        <Link to="#about" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link> 
+                        <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
+                        <Link to="#contact" onClick={handleLinkClick}><p className='HeaderP'>Our Branches</p></Link> 
+                        <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'>Bible Quiz</p></Link> 
+                        <Link to="#academics" onClick={handleLinkClick}><p className='HeaderP'>Downloads</p></Link> 
+                        <Link to="/ContactUs" onClick={handleLinkClick}><p className='HeaderP'>Contact Us</p></Link> 
                     </ul>
                 </nav>
             </header>

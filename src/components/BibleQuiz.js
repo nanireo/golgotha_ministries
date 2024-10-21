@@ -34,6 +34,7 @@ const BibleQuiz = () => {
 
   const handleClick = (form) => {
     setSelectedForm(form);
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); // Smooth scroll to the bottom
   };
 
   const handleClose = () => {
@@ -48,7 +49,7 @@ const BibleQuiz = () => {
             key={index}
             src={form.image}
             alt={`Bible Quiz ${index + 1}`}
-            onClick={() => handleClick(form)}
+            onClick={() => handleClick(form)} // Call handleClick with the selected form
             className="quiz-image"
           />
         ))}
@@ -58,11 +59,11 @@ const BibleQuiz = () => {
         <div className="form-wrapper">
           <h4>Bible Quiz</h4>
           <button onClick={handleClose} className="close-button">
-            <FaTimes /> {/* Always show the 'X' close icon */}
+            <FaTimes /> {/* Close icon */}
           </button>
           <iframe
             src={selectedForm.src}
-            width="640"
+            width="100%"
             height={selectedForm.height}
             frameBorder="0"
             marginHeight="0"

@@ -35,9 +35,9 @@
     max-height: 90%;
     outline: none;
     z-index: 2000; /* Higher than the header's z-index */
-}
-
-.modal-content {
+  }
+  
+  .modal-content {
     display: flex;
     align-items: center; /* Center the image and buttons vertically */
   }
@@ -63,8 +63,7 @@
     flex-grow: 1; /* Allow image to take available space */
   }
   
-
-.overlay {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -72,11 +71,9 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 1500; /* Ensure overlay is above the header */
-}
-
-
-
-.close-buttonimg {
+  }
+  
+  .close-buttonimg {
     position: absolute;
     top: 20px;
     right: -30px;
@@ -86,29 +83,57 @@
     color: #fff;
     cursor: pointer;
     z-index: 2500; /* Ensure close button is clickable and on top of everything */
-}
-
-.close-buttonimg:hover {
+  }
+  
+  .close-buttonimg:hover {
     background-color: #ff6666; /* Optional hover color change */
     border-radius: 1000px;
   }
-/* Mobile view adjustments */
+  
+  /* Mobile view adjustments */
 @media screen and (max-width: 720px) {
     .image-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
-
+  
     .modal {
-        max-width: 85%;
+      /* Full-screen style already applied */
     }
-}
-
-@media screen and (max-width: 480px) {
+  
+    .modal-image {
+      max-height: 70vh; /* Adjust image height for mobile */
+    }
+  
+    .arrow-button {
+      font-size: 2.5rem; /* Smaller arrow buttons for mobile */
+      padding: 10px; /* Adjust padding for better touch accessibility */
+    }
+  
+    .close-buttonimg {
+      top: 15px; /* Adjust close button position for mobile */
+      right: 20px; /* Adjust close button position for mobile */
+      font-size: 1.5rem; /* Smaller close button for mobile */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
     .image-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
-
+  
     .modal {
-        max-width: 90%;
+      /* Full-screen style already applied */
     }
-}
+  
+    .modal-image {
+      max-height: 100%; /* Allow image to take full height on very small screens */
+    }
+  
+    .arrow-button {
+      font-size: 2rem; /* Even smaller arrow buttons for very small screens */
+    }
+  
+    .close-buttonimg {
+      font-size: 1.2rem; /* Smaller close button for very small screens */
+    }
+  }
