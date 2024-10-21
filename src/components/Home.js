@@ -4,7 +4,6 @@ import MapLink from './MapLink';
 import YoutubeVideos from './YoutubeVideos';
 import Banner from './Banner';
 import Messagepdf from './messagepdf';
-import GoogleForm from './GoogleForm';
 
 
 function Home() {
@@ -60,10 +59,6 @@ function Home() {
 
             <div>
                 <YoutubeVideos/>
-            </div>
-
-            <div>
-            <GoogleForm/>
             </div>
 
             <div>

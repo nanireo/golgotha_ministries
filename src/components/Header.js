@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Importing menu and close icons from react-icons
-import {BrowserRouter, Routes, Route,Link } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +30,9 @@ function Header() {
                     <ul>
                     <Link to = "/Home"><p class='HeaderP'>Home</p></Link> 
                     <Link to = "#about"><p class='HeaderP'>About</p></Link> 
-                    <Link to = "#services"><p class='HeaderP'>Gallery</p></Link> 
+                    <Link to = "/ImageGallery"><p class='HeaderP'>Gallery</p></Link> 
                     <Link to = "#contact"><p class='HeaderP'>Our Branches</p></Link> 
-                    <Link to = "#departments"><p class='HeaderP'>Vision</p></Link> 
+                    <Link to = "/BibleQuiz"><p class='HeaderP'>Bible Quiz</p></Link> 
                     <Link to = "#academics"><p class='HeaderP'>Downloads</p></Link> 
                     <Link to = "/ContactUs"><p class='HeaderP'>Contact Us</p></Link> 
 

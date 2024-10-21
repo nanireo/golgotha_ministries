@@ -1,0 +1,114 @@
+/* Gallery container */
+.gallery-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Modal styles */
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    outline: none;
+    z-index: 2000; /* Higher than the header's z-index */
+}
+
+.modal-content {
+    display: flex;
+    align-items: center; /* Center the image and buttons vertically */
+  }
+  
+  .arrow-button {
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    color: #ffffff; /* Change as needed */
+    cursor: pointer;
+    padding: 20px;
+    z-index: 2001; /* Ensure arrows are above other elements */
+  }
+  
+  .arrow-button:hover {
+    color: #ff6666; /* Optional hover color change */
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    flex-grow: 1; /* Allow image to take available space */
+  }
+  
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1500; /* Ensure overlay is above the header */
+}
+
+
+
+.close-buttonimg {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2500; /* Ensure close button is clickable and on top of everything */
+}
+
+.close-buttonimg:hover {
+    background-color: #ff6666; /* Optional hover color change */
+    border-radius: 1000px;
+  }
+/* Mobile view adjustments */
+@media screen and (max-width: 720px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .modal {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .modal {
+        max-width: 90%;
+    }
+}

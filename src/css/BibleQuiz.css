@@ -1,0 +1,81 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.quiz-image {
+  cursor: pointer;
+  width: 150px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.quiz-image:hover {
+  transform: scale(1.1);
+}
+
+.form-wrapper {
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: #ff3232;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.close-button svg {
+  font-size: 18px;
+}
+
+/* Removed hover effect */
+.close-button:hover {
+  background-color: #ff3232; /* No color change */
+}
+
+.form-iframe {
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-wrapper {
+      flex: 1 1 100%;
+      margin: 5px;
+  }
+
+  .form-iframe {
+      height: 2000px;
+  }
+}
