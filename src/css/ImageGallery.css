@@ -143,10 +143,7 @@
 
 /* For very small screens (like phones) */
 @media screen and (max-width: 480px) {
-  .modal {
-    /* Already full-screen on mobile */
-  }
-
+ 
   .modal-image {
     max-height: 100vh; /* Allow image to take full screen on very small screens */
   }
