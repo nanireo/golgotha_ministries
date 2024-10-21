@@ -52,7 +52,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-container">
-      <h2>Contact Us</h2>
+      <h2>Prayer Request</h2>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
