@@ -61,6 +61,9 @@ const PdfViewer = () => {
             {isViewerOpen && (
                 <div className="pdf-display">
                     <button onClick={closeViewer} className="close-button" aria-label="Close Viewer">✖</button>
+                    <a href={pdfFiles[currentPdfIndex].pdfSrc} download className="download-button" aria-label="Download PDF">
+                        <FaDownload />
+                    </a>
                     <Worker workerUrl={GlobalWorkerOptions.workerSrc}>
                         <Viewer 
                             fileUrl={pdfFiles[currentPdfIndex].pdfSrc} 
@@ -68,9 +71,6 @@ const PdfViewer = () => {
                         />
                     </Worker>
                     {loadingError && <div className="error-message">{loadingError}</div>}
-                    <a href={pdfFiles[currentPdfIndex].pdfSrc} download className="download-button" aria-label="Download PDF">
-                        <FaDownload />
-                    </a>
                 </div>
             )}
         </div>

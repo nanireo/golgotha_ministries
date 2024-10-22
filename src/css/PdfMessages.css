@@ -22,7 +22,7 @@
 }
 
 .pdf-display {
-  position: relative; /* Allows positioning the close button */
+  position: relative; /* Allows positioning the close and download buttons */
   width: 80%; /* Increase size for better visibility */
   height: auto;
   margin-top: 20px;
@@ -30,17 +30,35 @@
 
 .close-button {
   position: absolute; /* Position it in the top right corner */
-  top: -8px; /* Adjust this based on the new size */
-  right: -80px;
+  top: 10px; /* Position from the top */
+  right: 10px; /* Position from the right, use percentage or pixel as needed */
   background-color: #ff5733;
   color: white;
   border: none;
-  padding: 15px;
-  border-radius: 50%;
+  padding: 10px;
   cursor: pointer;
+  z-index: 10; /* Ensure it is above other elements */
 }
 
 .close-button:hover {
+  background-color: #c74c28;
+}
+
+.download-button {
+  position: absolute; /* Position it in the top left corner */
+  top: 10px; /* Position from the top */
+  left: 10px; /* Position from the left, use percentage or pixel as needed */
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 10; /* Ensure it is above other elements */
+}
+
+.download-button:hover {
   background-color: #c74c28;
 }
 
@@ -54,24 +72,6 @@
   margin: 10px;
 }
 
-.download-button {
-  background-color: #ff5733;
-  position: absolute; /* Position it in the top right corner */
-  top: -5px; /* Adjust this based on the new size */
-  right: -30px;
-  color: white;
-  
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.download-button:hover {
-  background-color: #c74c28;
-}
-
 /* Responsive styles */
 @media (max-width: 720px) {
   .pdf-thumbnail {
@@ -79,19 +79,14 @@
   }
 
   .pdf-display {
-    width: 90%;
+    width: 90%; /* Allow it to take up more space on smaller screens */
     padding: 10px;
   }
 
-  .close-button {
-    padding: 12px; /* Adjust size for smaller screens */
-    top: -8px;
-    right: -8px;
-  }
-
-  .nav-button, .download-button {
-    padding: 8px;
-    margin: 5px;
+  .close-button,
+  .download-button {
+    padding: 8px; /* Adjust size for smaller screens */
+    font-size: 14px; /* Make text smaller for mobile */
   }
 }
 
@@ -101,18 +96,13 @@
   }
 
   .pdf-display {
-    width: 100%;
+    width: 100%; /* Full width on mobile */
     padding: 5px;
   }
 
-  .close-button {
-    padding: 10px; /* Adjust size for smaller screens */
-    top: -5px;
-    right: -5px;
-  }
-
-  .nav-button, .download-button {
-    padding: 5px;
-    margin: 3px;
+  .close-button,
+  .download-button {
+    padding: 5px; /* Adjust size for smaller screens */
+    font-size: 12px; /* Further reduce text size for mobile */
   }
 }
