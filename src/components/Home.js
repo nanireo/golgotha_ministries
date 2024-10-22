@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import MapLink from './MapLink';
 import YoutubeVideos from './YoutubeVideos';
 import Banner from './Banner';
-import Messagepdf from './messagepdf';
+import PdfViewer from './PdfMessages';
 
 
 function Home() {
@@ -62,11 +62,12 @@ function Home() {
             </div>
 
             <div>
-                <Messagepdf />
+                <PdfViewer/>
             </div>
+           
 
             <div>
-                <MapLink />
+                <MapLink/>
             </div>
         </main>
     );

@@ -1,0 +1,118 @@
+.pdf-viewer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.thumbnail-display {
+  display: flex;
+  align-items: center;
+}
+
+.pdf-thumbnail {
+  width: 200px; /* Adjust as needed */
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.pdf-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.pdf-display {
+  position: relative; /* Allows positioning the close button */
+  width: 80%; /* Increase size for better visibility */
+  height: auto;
+  margin-top: 20px;
+}
+
+.close-button {
+  position: absolute; /* Position it in the top right corner */
+  top: -8px; /* Adjust this based on the new size */
+  right: -80px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #c74c28;
+}
+
+.nav-button {
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.download-button {
+  background-color: #ff5733;
+  position: absolute; /* Position it in the top right corner */
+  top: -5px; /* Adjust this based on the new size */
+  right: -30px;
+  color: white;
+  
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background-color: #c74c28;
+}
+
+/* Responsive styles */
+@media (max-width: 720px) {
+  .pdf-thumbnail {
+    width: 150px; /* Adjust size for smaller screens */
+  }
+
+  .pdf-display {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .close-button {
+    padding: 12px; /* Adjust size for smaller screens */
+    top: -8px;
+    right: -8px;
+  }
+
+  .nav-button, .download-button {
+    padding: 8px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdf-thumbnail {
+    width: 100px; /* Further adjust for mobile screens */
+  }
+
+  .pdf-display {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .close-button {
+    padding: 10px; /* Adjust size for smaller screens */
+    top: -5px;
+    right: -5px;
+  }
+
+  .nav-button, .download-button {
+    padding: 5px;
+    margin: 3px;
+  }
+}
