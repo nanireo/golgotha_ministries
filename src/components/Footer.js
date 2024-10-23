@@ -14,13 +14,13 @@ function Footer() {
                     <p>Phone: +91 85008 15334</p>
                 </div>
                 <div className="social_media">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/Golgothaministriesarmoor" target="_blank" rel="noopener noreferrer">
                         <FaFacebook size={24} color="#F1F1F1" />
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/golgotha_ministries_official/profilecard/?igsh=d2JjbzY2cjdpbXFn" target="_blank" rel="noopener noreferrer">
                         <FaInstagram size={24} color="#F1F1F1" />
                     </a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://youtube.com/@golgothaministryarmoor?si=ETmxZNb6MCvTRIbw" target="_blank" rel="noopener noreferrer">
                         <FaYoutube size={24} color="#F1F1F1" />
                     </a>
                 </div>

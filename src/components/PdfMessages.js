@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaDownload } from "react-icons/fa";
 
 // Set the worker source
-GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.worker.min.js`;
+GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js`;
 
 const pdfFiles = [
     { imgSrc: "/pics/pdf.jpg", pdfSrc: "/pdf/BOLDNESS IN EVANGELISM_3.pdf", name: "Boldness in Evangelism" },

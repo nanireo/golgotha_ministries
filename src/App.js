@@ -17,6 +17,7 @@ import './css/ImageGallery.css';
 import './css/AboutUs.css';
 import './css/PdfMessages.css';
 import './css/FAQs.css';
+import './css/WhatsappPopup.css';
 
 
 
@@ -26,11 +27,11 @@ import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 import BibleQuiz from './components/BibleQuiz';
 import ImageGallery from './components/ImageGallery';
-import AboutUs from './components/AboutUs';
-import PdfMessages from './components/PdfMessages';
+ import PdfMessages from './components/PdfMessages';
 import YoutubeVideos from './components/YoutubeVideos';
 import FAQs from './components/FAQs';
 
+import WhatsappPopup from './components/WhatsappPopup';
 
 
 
@@ -47,14 +48,14 @@ function App() {
                     <Route path="/ContactUs" element={<ContactUs />} />
                     <Route path="/BibleQuiz" element={<BibleQuiz />} />
                     <Route path="/ImageGallery" element={<ImageGallery />} />
-                    <Route path="/AboutUs" element={<AboutUs />} />
-                    <Route path="/PdfMessages" element={<PdfMessages />} />
+                     <Route path="/PdfMessages" element={<PdfMessages />} />
                     <Route path="/YoutubeVideos" element={<YoutubeVideos />} />
                     <Route path="/FAQs" element={<FAQs />} />
 
                     
                 </Routes>
-                
+                <WhatsappPopup />
+
                 <Footer />
             </Router>
         </div>
