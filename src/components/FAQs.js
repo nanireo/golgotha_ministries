@@ -52,6 +52,8 @@ const FAQs = () => {
 
   return (
     <div className="faq-container">
+            <h1 style={{ fontSize: '32px', color: '#FF5733', textAlign: 'center' }}>FAQs</h1>
+
       {faqs.map((faq, index) => (
         <div className="faq-item" key={index}>
           <div className="faq-question" onClick={() => toggleFAQ(index)}>

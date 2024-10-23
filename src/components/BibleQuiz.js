@@ -42,7 +42,9 @@ const BibleQuiz = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container"> 
+                <h1 style={{ fontSize: '32px', color: '#FF5733', textAlign: 'center' }}>Bible Quiz</h1>
+
       <div className="image-gallery">
         {forms.map((form, index) => (
           <img

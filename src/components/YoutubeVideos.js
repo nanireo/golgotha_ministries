@@ -52,6 +52,8 @@ const YoutubeChannelVideos = () => {
 
   return (
     <div className="youtube-video-container">
+      <h1 style={{ fontSize: '32px', color: '#ffffff', textAlign: 'center' }}>YouTube Video</h1>
+    
       <h1>SAMUEL MORIES ON YouTube</h1>
 
       {/* Subscribe button */}
