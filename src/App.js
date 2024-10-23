@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter , HashRouter as Router, Routes, Route } from 'react-router-dom';
+ 
  
 // No need for hash-based routing now
 
@@ -43,8 +43,7 @@ function App() {
             <Router>
                 <Header />
                 <Routes>
-                     <Route path="*" element={<NotFound />} />
-                    <Route path="/" element={<Home />} />
+                     <Route path="/" element={<Home />} />
                     <Route path="/Home" element={<Home />} />
                     <Route path="/ContactUs" element={<ContactUs />} />
                     <Route path="/BibleQuiz" element={<BibleQuiz />} />
