@@ -16,6 +16,7 @@ import './css/BibleQuiz.css';
 import './css/ImageGallery.css';
 import './css/AboutUs.css';
 import './css/PdfMessages.css';
+import './css/FAQs.css';
 
 
 
@@ -26,8 +27,11 @@ import ContactUs from './components/ContactUs';
 import BibleQuiz from './components/BibleQuiz';
 import ImageGallery from './components/ImageGallery';
 import AboutUs from './components/AboutUs';
+import PdfMessages from './components/PdfMessages';
+import YoutubeVideos from './components/YoutubeVideos';
+import FAQs from './components/FAQs';
 
- 
+
 
 
 
@@ -44,7 +48,10 @@ function App() {
                     <Route path="/BibleQuiz" element={<BibleQuiz />} />
                     <Route path="/ImageGallery" element={<ImageGallery />} />
                     <Route path="/AboutUs" element={<AboutUs />} />
- 
+                    <Route path="/PdfMessages" element={<PdfMessages />} />
+                    <Route path="/YoutubeVideos" element={<YoutubeVideos />} />
+                    <Route path="/FAQs" element={<FAQs />} />
+
                     
                 </Routes>
                 

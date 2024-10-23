@@ -10,10 +10,10 @@ import { FaDownload } from "react-icons/fa";
 GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.worker.min.js`;
 
 const pdfFiles = [
-    { imgSrc: "/pics/pdf.jpg", pdfSrc: "/pdf/BOLDNESS IN EVANGELISM_3.pdf" },
-    { imgSrc: "/pics/pdf1.jpg", pdfSrc: "/pdf/PERSONAL TESTIMONIES IN EVANGELISM_4.pdf" },
-    { imgSrc: "/pics/pdf3.jpeg", pdfSrc: "/pdf/The Great Commission_1.pdf" },
-    { imgSrc: "/pics/pdf4.jpg", pdfSrc: "/pdf/THE HOLY SPIRIT EMPOWERS EVANGELISM_2.pdf" },
+    { imgSrc: "/pics/pdf.jpg", pdfSrc: "/pdf/BOLDNESS IN EVANGELISM_3.pdf", name: "Boldness in Evangelism" },
+    { imgSrc: "/pics/pdf1.jpg", pdfSrc: "/pdf/PERSONAL TESTIMONIES IN EVANGELISM_4.pdf", name: "Personal Testimonies in Evangelism" },
+    { imgSrc: "/pics/pdf3.jpeg", pdfSrc: "/pdf/The Great Commission_1.pdf", name: "The Great Commission" },
+    { imgSrc: "/pics/pdf4.jpg", pdfSrc: "/pdf/THE HOLY SPIRIT EMPOWERS EVANGELISM_2.pdf", name: "The Holy Spirit Empowers Evangelism" },
 ];
 
 const PdfViewer = () => {
@@ -49,12 +49,15 @@ const PdfViewer = () => {
             <h2>Christian Messages PDF</h2>
             <div className="thumbnail-display">
                 <button onClick={handlePrev} className="nav-button" aria-label="Previous PDF">◀</button>
-                <img 
-                    src={pdfFiles[currentPdfIndex].imgSrc} 
-                    alt={`PDF Thumbnail ${currentPdfIndex + 1}`} 
-                    className="pdf-thumbnail" 
-                    onClick={() => openViewer(currentPdfIndex)} 
-                />
+                <div className="pdf-thumbnail-container">
+                    <img 
+                        src={pdfFiles[currentPdfIndex].imgSrc} 
+                        alt={`PDF Thumbnail ${currentPdfIndex + 1}`} 
+                        className="pdf-thumbnail" 
+                        onClick={() => openViewer(currentPdfIndex)} 
+                    />
+                    <div className="pdf-caption">{pdfFiles[currentPdfIndex].name}</div>
+                </div>
                 <button onClick={handleNext} className="nav-button" aria-label="Next PDF">▶</button>
             </div>
 

@@ -92,7 +92,8 @@ nav ul a {
         width: 100%;
     }
 
-    .nav-links {
+    .nav-links { 
+        position: sticky;
         display: none;
         flex-direction: column;
         background-color: #003366;

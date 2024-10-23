@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.pdf-thumbnail-container {
+  text-align: center;
+}
+
 .pdf-thumbnail {
   width: 200px; /* Adjust as needed */
   margin: 10px;
@@ -19,6 +23,13 @@
 
 .pdf-thumbnail:hover {
   transform: scale(1.05);
+}
+
+.pdf-caption {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
 }
 
 .pdf-display {

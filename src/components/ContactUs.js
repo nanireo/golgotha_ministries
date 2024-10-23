@@ -1,6 +1,7 @@
 import React from 'react';
 import ContactForm from './Contactform';
 
+import MapLink from './MapLink';
 
 
 const ContactUs = () => {
@@ -38,9 +39,13 @@ const ContactUs = () => {
 
       
     </div>
-    <div>
+            <div>
                 <ContactForm />
             </div> 
+
+            <div>
+                <MapLink/>
+            </div>
     </main>
     
   );

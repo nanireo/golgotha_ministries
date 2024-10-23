@@ -35,9 +35,11 @@ function Header() {
                         <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'>Home</p></Link> 
                         <Link to="/AboutUs" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link> 
                         <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
-                        <Link to="#contact" onClick={handleLinkClick}><p className='HeaderP'>Our Branches</p></Link> 
+                        <Link to="/YoutubeVideos" onClick={handleLinkClick}><p className='HeaderP'>YouTube Videos</p></Link> 
+
+                        <Link to="/FAQs" onClick={handleLinkClick}><p className='HeaderP'>FAQs</p></Link> 
                         <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'>Bible Quiz</p></Link> 
-                        <Link to="#Messagepdfs" onClick={handleLinkClick}><p className='HeaderP'>Downloads</p></Link> 
+                        <Link to="/PdfMessages" onClick={handleLinkClick}><p className='HeaderP'>Pdf Messages</p></Link>
                         <Link to="/ContactUs" onClick={handleLinkClick}><p className='HeaderP'>Contact Us</p></Link> 
                     </ul>
                 </nav>
