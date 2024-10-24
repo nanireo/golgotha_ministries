@@ -4,6 +4,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .nav-links {
     background-color: #003366;
     color: #fff;
