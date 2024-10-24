@@ -21,15 +21,14 @@
   },
   "devDependencies": {
     "babel-loader": "8.1.0",
+    "serve": "^14.2.4",
     "worker-loader": "^3.0.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npx serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start": "serve -s build"
-
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
