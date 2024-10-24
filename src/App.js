@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter , HashRouter as Router, Routes, Route } from 'react-router-dom';
  
- 
+  
 // No need for hash-based routing now
 
 import './css/Header.css';
