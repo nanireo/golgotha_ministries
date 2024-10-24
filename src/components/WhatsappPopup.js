@@ -13,7 +13,7 @@ function WhatsappPopup() {
                 <img
                     src="/icons/whatsapp-icon.png" // Correct path from public folder
                     alt="WhatsApp"
-                    style={{ width: '60px', height: '60px' }}
+                    style={{ width: '70px', height: '70px' }}
                 />
             </a>
         </div>
