@@ -1,3 +1,8 @@
+ /* Disable body scrolling when menu is open */
+.no-scroll {
+    overflow: hidden;
+}
+
 /* Base styles */
 body {
     margin: 0;
@@ -12,7 +17,7 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Keeps the header on top of regular content but below the modal */
+    z-index: 1000;
 }
 
 .logo-container {
@@ -81,7 +86,38 @@ nav ul a {
 }
 
 .nav-links.open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #003366;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's above other content */
+    overflow-y: auto; /* Make the menu scrollable */
+    padding-top: 150px; /* Add some padding to the top */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
 }
 
 /* Media Queries for Responsive */
@@ -93,15 +129,13 @@ nav ul a {
     }
 
     .nav-links { 
-        position: sticky;
         display: none;
-        flex-direction: column;
         background-color: #003366;
-        position: absolute;
-        top: 140px;
-        right: 0;
-        width: 100%;
-        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 
     .nav-links.open {
@@ -138,7 +172,6 @@ nav ul a {
     }
 
     .nav-links {
-        top: 120px;
         padding: 0;
     }
 

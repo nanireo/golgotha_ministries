@@ -7,10 +7,18 @@ function Header() {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+
+        // Toggle 'no-scroll' class on body when the menu is open/closed
+        if (!isOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
     };
 
     const handleLinkClick = () => {
-        setIsOpen(false); // Close the menu when a link is clicked
+        setIsOpen(false);
+        document.body.classList.remove('no-scroll'); // Ensure scrolling is enabled when a link is clicked
     };
 
     return (
@@ -33,10 +41,8 @@ function Header() {
                 <nav>
                     <ul>
                         <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'>Home</p></Link> 
-                        {/* <Link to="/AboutUs" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link>  */}
                         <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
                         <Link to="/YoutubeVideos" onClick={handleLinkClick}><p className='HeaderP'>YouTube</p></Link> 
-
                         <Link to="/FAQs" onClick={handleLinkClick}><p className='HeaderP'>FAQs</p></Link> 
                         <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'>Bible Quiz</p></Link> 
                         <Link to="/PdfMessages" onClick={handleLinkClick}><p className='HeaderP'>PDF Messages</p></Link>
@@ -44,10 +50,6 @@ function Header() {
                     </ul>
                 </nav>
             </header>
-
-            <main>
-                {/* Your main content goes here */}
-            </main>
         </>
     );
 }
