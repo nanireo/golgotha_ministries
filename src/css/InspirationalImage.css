@@ -1,0 +1,38 @@
+.bible-widgets {
+    display: flex;
+    flex-direction: column; /* Stacks widgets vertically */
+    align-items: center; /* Aligns items to the right */
+    padding: 10px;
+    text-align: center; /* Aligns text to the right */
+}
+
+.widget {
+    width: 100%; /* Full width for the widget */
+    max-width: 344px; /* Maximum width for the widget */
+}
+
+/* Responsive styles for 720px */
+@media (max-width: 720px) {
+    .widget {
+        max-width: 300px; /* Adjust maximum width for 720px view */
+    }
+}
+
+/* Responsive styles for 600px */
+@media (max-width: 600px) {
+    .widget {
+        width: 100%; /* Full width on small screens */
+        max-width: 90%; /* Allow more width on smaller screens */
+    }
+}
+
+/* Responsive styles for 480px */
+@media (max-width: 480px) {
+    .bible-widgets {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .widget {
+        max-width: 100%; /* Full width on very small screens */
+    }
+}

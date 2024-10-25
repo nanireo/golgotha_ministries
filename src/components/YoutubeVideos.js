@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // Icons for show more/less
-import { FaYoutube } from 'react-icons/fa'; // YouTube icon for the subscribe button
+import { FaChevronDown, FaChevronUp, FaYoutube } from 'react-icons/fa';
 
 const YoutubeChannelVideos = () => {
   const [featuredVideo, setFeaturedVideo] = useState(null);
@@ -37,13 +36,7 @@ const YoutubeChannelVideos = () => {
           console.log('No videos found.');
         }
       } catch (error) {
-        if (error.response) {
-          console.error('Error response:', error.response.data);
-        } else if (error.request) {
-          console.error('Error request:', error.request);
-        } else {
-          console.error('Error message:', error.message);
-        }
+        console.error('Error fetching videos:', error);
       }
     };
 
@@ -51,65 +44,61 @@ const YoutubeChannelVideos = () => {
   }, [channelId]);
 
   return (
-    <div className="youtube-video-container">
-      <h1 style={{ fontSize: '32px', color: '#ffffff', textAlign: 'center' }}>YouTube</h1>
-    
-      <h1>SAMUEL MORIES ON YouTube</h1>
-
+    <div className="youtube-container">
+      <h1 className="youtube-title">SAMUEL MORIES ON YouTube</h1>
+ 
       {/* Subscribe button */}
-      <div className="subscribe-button-container">
+      <div className="subscribe-btn-wrapper">
         <a
           href={`https://www.youtube.com/channel/${channelId}?sub_confirmation=1`}
           target="_blank"
           rel="noopener noreferrer"
-          className="subscribe-button"
+          className="subscribe-btn"
         >
           <FaYoutube className="youtube-icon" /> Subscribe
         </a>
       </div>
 
-      <div className="video-section">
-        <div className="video-row">
-          {/* Featured (big) video */}
-          <div className="featured-video-wrapper">
-            {featuredVideo && (
-              <iframe
-                width="100%"
-                height="450"
-                src={`https://www.youtube.com/embed/${featuredVideo.id.videoId}`}
-                title={featuredVideo.snippet.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            )}
-          </div>
-
-          {/* Smaller videos */}
-          <div className="small-videos-wrapper">
-            {otherVideos.slice(0, videosLimit).map((video) => (
-              <div key={video.id.videoId} className="video-wrapper">
-                <iframe
-                  width="100%"
-                  height="150"
-                  src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                  title={video.snippet.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            ))}
-          </div>
+      {/* Featured video */}
+      {featuredVideo && (
+        <div className="featured-video">
+          <iframe
+            width="100%"
+            height="450"
+            src={`https://www.youtube.com/embed/${featuredVideo.id.videoId}`}
+            title={featuredVideo.snippet.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
+      )}
+
+      {/* Other videos grid */}
+      <div className="videos-grid">
+        {otherVideos.slice(0, videosLimit).map((video) => (
+          <div key={video.id.videoId} className="video-item">
+            <iframe
+              width="100%"
+              height="150"
+              src={`https://www.youtube.com/embed/${video.id.videoId}`}
+              title={video.snippet.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        ))}
       </div>
 
-      <button 
-        className="show-more-btn" 
+      {/* Show more/less button */}
+      <button
+        className="toggle-btn"
         onClick={() => {
           setShowMoreVideos(!showMoreVideos);
           setVideosLimit(showMoreVideos ? 3 : otherVideos.length);
-        }}>
+        }}
+      >
         {showMoreVideos ? 'Show Less ' : 'Show More '}
         {showMoreVideos ? <FaChevronUp /> : <FaChevronDown />}
       </button>

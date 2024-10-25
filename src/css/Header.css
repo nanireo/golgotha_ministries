@@ -88,32 +88,46 @@ nav ul a {
     display: block;
 }
 
-/* Media Queries for Responsive */
+ /* Media Queries for Responsive */
 @media screen and (max-width: 720px) {
-    .HeaderP {
-        padding: 2px;
-        text-align: center;
+    /* Fix the logo and menu icon at the top */
+    .logo-container {
+        position: fixed; /* Fix at the top */
+        top: 0;
+        left: 0;
+        right: 0;
         width: 100%;
+        background-color: #fff; /* Add background to ensure visibility */
+        z-index: 1000; /* Ensure it stays above other content */
+         height: 100px; /* Adjust height for mobile view */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 1000; /* Make sure it stays above the menu links */
     }
 
     .nav-links { 
-        position: sticky;
         display: none;
         flex-direction: column;
         background-color: #003366;
-        position: absolute;
-        top: 140px;
+        position: fixed;
+        top: 100px; /* Open the menu right below the fixed logo section */
         right: 0;
         width: 100%;
         padding: 0;
+        z-index: 900;
     }
 
     .nav-links.open {
         display: flex;
     }
 
-    .menu-icon {
-        display: block;
+    .HeaderP {
+        padding: 2px;
+        text-align: center;
+        width: 100%;
     }
 
     nav ul {
@@ -142,7 +156,7 @@ nav ul a {
     }
 
     .nav-links {
-        top: 120px;
+        top: 80px; /* Adjust to fit below the smaller header */
         padding: 0;
     }
 

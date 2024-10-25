@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Importing menu and close icons from react-icons
 import { Link } from 'react-router-dom';
-
+ 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -30,8 +30,11 @@ function Header() {
                     </div>
                     <div className="college-info">
                         <h1>Golgotha Ministries</h1>
+                        
                     </div>
+                   
                 </div>
+                
                 <div className="menu-icon" onClick={toggleMenu}>
                     {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />} {/* Toggle between menu and close icons */}
                 </div>
@@ -42,7 +45,7 @@ function Header() {
                     <ul>
                         <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'>Home</p></Link> 
                         <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
-                        <Link to="/YoutubeVideos" onClick={handleLinkClick}><p className='HeaderP'>YouTube</p></Link> 
+                        <Link to="/AboutUs" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link> 
                         <Link to="/FAQs" onClick={handleLinkClick}><p className='HeaderP'>FAQs</p></Link> 
                         <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'>Bible Quiz</p></Link> 
                         <Link to="/PdfMessages" onClick={handleLinkClick}><p className='HeaderP'>PDF Messages</p></Link>

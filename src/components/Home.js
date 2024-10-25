@@ -3,8 +3,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import MapLink from './MapLink';
 import YoutubeVideos from './YoutubeVideos';
 import Banner from './Banner';
-// import PdfViewer from './PdfMessages'; 
+import PdfViewer from './PdfMessages'; 
 import AboutUs from './AboutUs';
+import InspirationalImage from './InspirationalImage';
+import VerseSearch from './VerseSearch';
 
 
 
@@ -20,10 +22,21 @@ function Home() {
             <div>
                 <Banner />
             </div> 
-
-             
+            <div>
+                <InspirationalImage />
+            </div> 
+            {/* <div>
+                <VerseSearch />
+            </div>  */}
+{/*             
             <div>
                 <AboutUs/>
+            </div> */}
+            <div>
+                <YoutubeVideos/>
+            </div>
+            <div>
+                <PdfViewer/>
             </div>
            
 

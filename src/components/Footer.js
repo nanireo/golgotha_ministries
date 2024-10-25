@@ -1,5 +1,8 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import VisitorCount from './VisitorCount';
+
+
 
 function Footer() {
     return (
@@ -29,6 +32,9 @@ function Footer() {
                 <hr className="divider" />
                 <div className="copyright-notice">
                     &copy; 2024 Golgotha Church
+                    <div>
+                        <VisitorCount />
+                    </div> 
                 </div>
             </div>
         </footer>

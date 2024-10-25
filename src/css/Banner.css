@@ -74,6 +74,28 @@
     right: 10px;
 }
 
+.verse-of-the-day {
+    position: absolute; /* Position it relative to the banner */
+    bottom: 20px; /* Adjust based on your design */
+    right: 60%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 10; /* Ensure it's above the slides */
+}
+
+.widget-wrapper {
+    background-color:white; /* Darker semi-transparent background */
+     border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text inside */
+    color: white; /* Text color for surrounding elements */
+    font-size: 18px; /* Increased font size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+    border: 2px solid #ffffff; /* Add a white border for contrast */
+}
+
+ 
+
+
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .banner {

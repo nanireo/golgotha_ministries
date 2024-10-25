@@ -18,7 +18,8 @@ import './css/AboutUs.css';
 import './css/PdfMessages.css';
 import './css/FAQs.css';
 import './css/WhatsappPopup.css';
-
+import './css/InspirationalImage.css';
+import './css/VerseSearch.css';
 
 
 import Header from './components/Header';
@@ -30,6 +31,7 @@ import ImageGallery from './components/ImageGallery';
  import PdfMessages from './components/PdfMessages';
 import YoutubeVideos from './components/YoutubeVideos';
 import FAQs from './components/FAQs';
+import AboutUs from './components/AboutUs';
 
 import WhatsappPopup from './components/WhatsappPopup';
 
@@ -51,6 +53,7 @@ function App() {
                      <Route path="/PdfMessages" element={<PdfMessages />} />
                     <Route path="/YoutubeVideos" element={<YoutubeVideos />} />
                     <Route path="/FAQs" element={<FAQs />} />
+                    <Route path="/AboutUs" element={<AboutUs />} />
 
                     
                 </Routes>
