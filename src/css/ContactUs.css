@@ -7,8 +7,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: all 0.3s ease;
+  margin-top: 20%;
+
 }
 
+ 
 .contact-container:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -17,6 +20,8 @@
   font-size: 32px;
   color: #003366;
   margin-bottom: 20px;
+  text-align: center;
+
 }
 
 .contact-infob {

@@ -1,15 +1,17 @@
+ /* Container Styling */
 .about-us-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     background-color: #f9f9f9;
+     margin-top: 20%;
 }
 
+/* Image Styling */
 .about-us-image {
     max-width: 400px;
-    margin-right: 20px; /* Adds space between the image and the text */
+    margin-right: 20px;
 }
 
 .about-us-image img {
@@ -18,12 +20,14 @@
     border-radius: 10px;
 }
 
+/* Content Styling */
 .about-us-content {
     max-width: 600px;
     text-align: justify;
 }
 
-.about-us-content h1, .about-us-content h2 {
+.about-us-content h1,
+.about-us-content h2 {
     margin: 10px 0;
 }
 
@@ -37,9 +41,7 @@
     .about-us-container {
         flex-direction: column;
         padding: 10px;
-        position: absolute;
-        top: 20%;
-        left: 0;
+        position: relative;
     }
 
     .about-us-image {
@@ -66,3 +68,5 @@
         font-size: 16px;
     }
 }
+
+ 
