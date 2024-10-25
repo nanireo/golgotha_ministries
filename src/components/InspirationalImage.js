@@ -3,7 +3,7 @@ import React from 'react';
 const InspirationalImage = () => {
   return (
     <div className="bible-widgets">
-      <h2>Inspirational Image of the Day Widget</h2>
+      <h2>Inspirational Image of the Day</h2>
       <div className="widget">
       <iframe
     src="https://www.kingjamesbibleonline.org/inspiring-images-widget.php"

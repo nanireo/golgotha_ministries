@@ -59,16 +59,7 @@ function Banner() {
                     &#10095;
                 </button>
             </div>
-            <div className="verse-of-the-day">
-                <div className="widget-wrapper">
-                    
-                    <iframe  
-                        src="https://www.kingjamesbibleonline.org/popular-bible-verses-widget.php" 
-                        style={{ width: "300px", height: "80px", border: "0px" }}
-                        title="Verse of the Day"
-                    ></iframe>
-                </div>
-            </div>
+           
         </section>
     );
 }

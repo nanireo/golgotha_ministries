@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgb(253, 9, 106), #4a90e2); /* Linear gradient */
-  margin-top: 20%;
 
 
 }
@@ -60,6 +59,7 @@
 /* Removed hover effect */
 .close-button:hover {
   background-color: #ff3232; /* No color change */
+
 }
 
 .form-iframe {
@@ -70,6 +70,10 @@
 @media (max-width: 768px) {
   .form-wrapper {
       flex: 1 1 100%;
+  }
+  .form-container {
+    margin-top: 20%;
+  
   }
 }
 

@@ -74,13 +74,7 @@
     right: 10px;
 }
 
-.verse-of-the-day {
-    position: absolute; /* Position it relative to the banner */
-    bottom: 20px; /* Adjust based on your design */
-    right: 60%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: 10; /* Ensure it's above the slides */
-}
+ 
 
 .widget-wrapper {
     background-color:white; /* Darker semi-transparent background */
@@ -155,3 +149,4 @@
         font-size: 12px;
     }
 }
+  
