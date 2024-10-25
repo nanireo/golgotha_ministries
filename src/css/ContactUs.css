@@ -59,6 +59,34 @@
   text-decoration: underline;
   color: #002244;
 }
+.phone-link {
+  display: flex;
+  align-items: center; /* Center align icon and text vertically */
+  text-decoration: none;
+  color: #003366; /* Set link color */
+}
+
+.phone-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Circle width */
+  height: 30px; /* Circle height */
+  border-radius: 50%; /* Make it circular */
+  background-color: #f4f4f4; /* Circle background color */
+  margin-right: 8px; /* Space between icon and text */
+  transition: background-color 0.2s ease;
+}
+
+.phone-icon:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+}
+
+.phone-icon svg {
+  color: #003366; /* Icon color */
+  width: 16px; /* Icon width */
+  height: 16px; /* Icon height */
+}
 
 /* Mobile view adjustments */
 @media (max-width: 600px) {
