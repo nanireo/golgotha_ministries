@@ -1,8 +1,8 @@
 .faq-container {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, rgb(253, 9, 106), #4a90e2); /* Linear gradient */
   }
   
   .faq-item {
@@ -23,7 +23,7 @@
   }
   
   .faq-question:hover {
-    background-color: #213344;
+    background: linear-gradient(135deg, rgb(118, 0, 0), #000000); /* Linear gradient */
   }
   
   .faq-answer {

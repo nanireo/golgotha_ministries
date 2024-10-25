@@ -23,9 +23,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1400px;
-    height: 140px;
+    width: 80%;
+    max-width: 1000px;
+    height: 100px;
 }
 
 .left-section {

@@ -4,9 +4,9 @@ import MapLink from './MapLink';
 import YoutubeVideos from './YoutubeVideos';
 import Banner from './Banner';
 import PdfViewer from './PdfMessages'; 
-import AboutUs from './AboutUs';
+// import AboutUs from './AboutUs';
 import InspirationalImage from './InspirationalImage';
-import VerseSearch from './VerseSearch';
+// import VerseSearch from './VerseSearch';
 
 
 

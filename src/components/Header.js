@@ -29,7 +29,7 @@ function Header() {
                         <img src="logo/GM_Logo.png" alt="Logo" />
                     </div>
                     <div className="college-info">
-                        <h1>Golgotha Ministries</h1>
+                        <h3>Golgotha Ministries</h3>
                         
                     </div>
                    
@@ -44,11 +44,12 @@ function Header() {
                 <nav>
                     <ul>
                         <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'>Home</p></Link> 
-                        <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
                         <Link to="/AboutUs" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link> 
+
+                        <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
                         <Link to="/FAQs" onClick={handleLinkClick}><p className='HeaderP'>FAQs</p></Link> 
                         <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'>Bible Quiz</p></Link> 
-                        <Link to="/PdfMessages" onClick={handleLinkClick}><p className='HeaderP'>PDF Messages</p></Link>
+                        {/* <Link to="/PdfMessages" onClick={handleLinkClick}><p className='HeaderP'>PDF Messages</p></Link> */}
                         <Link to="/ContactUs" onClick={handleLinkClick}><p className='HeaderP'>Contact Us</p></Link> 
                     </ul>
                 </nav>

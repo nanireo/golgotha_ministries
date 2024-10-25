@@ -32,9 +32,7 @@ function Footer() {
                 <hr className="divider" />
                 <div className="copyright-notice">
                     &copy; 2024 Golgotha Church
-                    <div>
-                        <VisitorCount />
-                    </div> 
+                    
                 </div>
             </div>
         </footer>
