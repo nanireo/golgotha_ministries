@@ -1,102 +1,97 @@
-/* Gallery container */
+ /* Gallery container */
 .gallery-container {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-  }
-  
-  .gallery-image {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-image:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Modal styles */
-  /* Modal styles for desktop */
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   padding: 20px;
-  max-width: 100%;
-  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+ /* Modal styles for desktop */
+.modal {
+  position: fixed; /* Change to fixed for full screen */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  padding: 0; /* No padding for full screen */
   outline: none;
   z-index: 2000;
 }
 
 .modal-image {
   width: 100%;
-  height: 100%;
-  max-height: 100%;
-  flex-grow: 1; /* Allow image to take available space */
+  height: 90%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
 }
-  
-  .modal-content {
-    display: flex;
-    align-items: center; /* Center the image and buttons vertically */
-  }
-  
-  .arrow-button {
-    background: transparent;
-    border: none;
-    font-size: 3rem;
-    color: #ffffff; /* Change as needed */
-    cursor: pointer;
-    padding: 20px;
-    z-index: 2001; /* Ensure arrows are above other elements */
-  }
-  
-  .arrow-button:hover {
-    color: #ff6666; /* Optional hover color change */
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1500; /* Ensure overlay is above the header */
-  }
-  
-  .close-buttonimg {
-    position: absolute;
-    top: 20px;
-    right: -30px;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-    z-index: 2500; /* Ensure close button is clickable and on top of everything */
-  }
-  
-  .close-buttonimg:hover {
-    background-color: #ff6666; /* Optional hover color change */
-    border-radius: 1000px;
-  }
 
+.modal-content {
+  position: relative; /* Allow positioning of arrows relative to modal */
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  height: 100%; /* Full height for content */
+}
 
- /* Mobile view adjustments */
+/* Arrow button styles */
+.arrow-button {
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #ffffff; /* Change as needed */
+  cursor: pointer;
+  position: absolute; /* Position absolute for arrows */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust position */
+  z-index: 2001; /* Ensure arrows are above other elements */
+}
+
+.arrow-button:first-child { /* Left arrow */
+  left: 20px; /* Adjust as needed */
+}
+
+.arrow-button:last-child { /* Right arrow */
+  right: 20px; /* Adjust as needed */
+}
+
+.close-buttonimg {
+  position: absolute;
+  top: 20px; /* Adjust position */
+  right: 30px; /* Adjust position */
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2500; /* Ensure close button is clickable and on top of everything */
+}
+
+.close-buttonimg:hover {
+  background-color: #ff6666; /* Optional hover color change */
+  border-radius: 1000px;
+}
+
+/* Mobile view adjustments */
 @media screen and (max-width: 720px) {
   .modal {
     position: fixed;
-    top: 40%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -107,7 +102,6 @@
   }
 
   .modal-content {
-    position: relative;
     flex-direction: column; /* Stack elements vertically for mobile */
   }
 
@@ -119,19 +113,6 @@
 
   .arrow-button {
     font-size: 2.5rem; /* Smaller arrow buttons for mobile */
-    position: absolute;
-    bottom: 10px; /* Position arrows at the bottom */
-    z-index: 2001;
-  }
-
-  /* Left arrow positioning */
-  .arrow-button:first-child {
-    left: 30%; /* Center it horizontally */
-  }
-
-  /* Right arrow positioning */
-  .arrow-button:last-child {
-    right: 30%; /* Center it horizontally */
   }
 
   .close-buttonimg {
@@ -143,24 +124,8 @@
 
 /* For very small screens (like phones) */
 @media screen and (max-width: 480px) {
- 
-  .modal-image {
-    max-height: 100vh; /* Allow image to take full screen on very small screens */
-  }
-
   .arrow-button {
     font-size: 2rem; /* Even smaller arrow buttons for very small screens */
-    bottom: 5px; /* Adjust positioning closer to the bottom for very small screens */
-  }
-
-  /* Left arrow positioning */
-  .arrow-button:first-child {
-    left: 25%; /* Center it horizontally on very small screens */
-  }
-
-  /* Right arrow positioning */
-  .arrow-button:last-child {
-    right: 25%; /* Center it horizontally on very small screens */
   }
 
   .close-buttonimg {
