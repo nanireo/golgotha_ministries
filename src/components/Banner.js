@@ -8,7 +8,18 @@ function Banner() {
         { src: "sliding/GM_2.jpg" },
         { src: "sliding/GM_3.jpg" },
         { src: "sliding/GM_4.jpg" },
-        { src: "church pics/14 c 2.jpeg" }
+        { src: "church pics/14 c 2.jpeg" },
+        // { // New slide for the Bible verse
+        //     content: (
+        //         <div className="bible-verse-container">
+        //             <iframe 
+        //                 src="https://www.kingjamesbibleonline.org/popular-bible-verses-widget.php"
+        //                 style={{ width: '1000%', height: '1000%', size: '108px', border: 'none' }}
+        //                 title="Daily Bible Verse"
+        //             />
+        //         </div>
+        //     )
+        // }
     ];
 
     useEffect(() => {
@@ -49,7 +60,11 @@ function Banner() {
                         className="slide"
                         style={{ display: index === currentSlide ? 'block' : 'none' }}
                     >
-                        <img src={slide.src} alt={`Slide ${index + 1}`} />
+                        {slide.src ? (
+                            <img src={slide.src} alt={`Slide ${index + 1}`} />
+                        ) : (
+                            slide.content // Render the iframe for the Bible verse slide
+                        )}
                     </div>
                 ))}
                 <button className="prev" onClick={handlePrevSlide}>
@@ -59,7 +74,6 @@ function Banner() {
                     &#10095;
                 </button>
             </div>
-           
         </section>
     );
 }
