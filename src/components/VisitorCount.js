@@ -4,17 +4,14 @@ function VisitorCount() {
   const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
-    // Check local storage for existing visitor count
-    const count = localStorage.getItem('visitorCount');
-    if (count) {
-      setVisitorCount(Number(count));
-    }
-
-    // Increment visitor count
-    const newCount = visitorCount + 1;
-    setVisitorCount(newCount);
-    localStorage.setItem('visitorCount', newCount);
-  }, [visitorCount]);
+    // Fetch visitor count from CountAPI and increment it
+    fetch('https://api.countapi.xyz/hit/yourwebsite.com/visitorCount')
+      .then((response) => response.json())
+      .then((data) => {
+        setVisitorCount(data.value);
+      })
+      .catch((error) => console.error('Error fetching visitor count:', error));
+  }, []);
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
@@ -24,5 +21,4 @@ function VisitorCount() {
   );
 }
 
- 
 export default VisitorCount;
