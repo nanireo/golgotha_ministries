@@ -14,7 +14,7 @@ function Footer() {
                 <div className="contact-info">
                     <h3 className="Contact-Uscolor">Golgotha Church</h3>
                     <p><b>Contact Person:</b> Samuel &nbsp; &nbsp; <br></br> <br></br><b>Email:</b> golgothaministryarmr@gmail.com</p>
-                    <p>Phone: +91 85008 15334</p>
+                    <p>Phone: +91 8309439956</p>
                 </div>
                 <div className="social_media">
                     <a href="https://www.facebook.com/Golgothaministriesarmoor" target="_blank" rel="noopener noreferrer">
