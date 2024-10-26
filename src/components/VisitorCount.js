@@ -1,34 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function VisitorCount() {
+  const [visits, setVisits] = useState(0);
+  const apiUrl = 'https://api.countapi.xyz/hit/golgotha-ministries.onrender.com/visits';
+
   useEffect(() => {
-    // Create a callback function to handle the response
-    window.cb = (response) => {
-      document.getElementById('visits').innerText = response.value;
+    const fetchVisitorCount = async () => {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        setVisits(data.value);
+      } catch (error) {
+        console.error('Error fetching visitor count:', error);
+      }
     };
 
-    // Load the CountAPI script
-    const script = document.createElement('script');
-    script.src = 'https://api.countapi.xyz/hit/golgotha-ministries.onrender.com/visits?callback=cb';
-    script.async = true;
-
-    // Append the script to the document body
-    document.body.appendChild(script);
-
-    // Clean up the script when the component unmounts
-    return () => {
-      document.body.removeChild(script);
-      delete window.cb; // Clean up the callback reference
-    };
-  }, []);
+    // Fetch visitor count when the component mounts
+    fetchVisitorCount();
+  }, [apiUrl]);
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1>Welcome to Our Website!</h1>
-      <h2>Visitor Count: <span id="visits">0</span></h2>
+      <h2>Visitor Count: <span>{visits}</span></h2>
     </div>
   );
 }
 
 export default VisitorCount;
- 
