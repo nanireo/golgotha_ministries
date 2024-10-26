@@ -5,7 +5,7 @@ function VisitorCount() {
 
   useEffect(() => {
     // Fetch visitor count from CountAPI and increment it
-    fetch('https://api.countapi.xyz/hit/golgotha-ministries.onrender.com//visitorCount')
+    fetch('https://api.countapi.xyz/hit/golgotha-ministries.onrender.com/visitorCount')
       .then((response) => response.json())
       .then((data) => {
         setVisitorCount(data.value);
