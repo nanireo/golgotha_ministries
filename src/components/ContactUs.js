@@ -28,7 +28,7 @@ const ContactUs = () => {
           <div className="info-item">
             <h3>Phone:</h3>
             <p>
-              <a href="tel:+918500815334" className="phone-link">
+              <a href="tel:+918309439956" className="phone-link">
               +91 85008 15334
 
                 <span className="phone-icon">
