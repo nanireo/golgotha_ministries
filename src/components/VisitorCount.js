@@ -4,13 +4,22 @@ function VisitorCount() {
   const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
-    // Fetch visitor count from CountAPI and increment it
-    fetch('https://api.countapi.xyz/hit/golgotha-ministries.onrender.com/visitorCount')
-      .then((response) => response.json())
-      .then((data) => {
-        setVisitorCount(data.value);
-      })
-      .catch((error) => console.error('Error fetching visitor count:', error));
+    // Define the callback function
+    window.cb = (response) => {
+      setVisitorCount(response.value);
+    };
+
+    // Load the CountAPI script
+    const script = document.createElement('script');
+    script.src = 'https://api.countapi.xyz/hit/golgotha-ministries.onrender.com/visits?callback=cb';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Cleanup the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+      delete window.cb; // Clean up the callback function
+    };
   }, []);
 
   return (
