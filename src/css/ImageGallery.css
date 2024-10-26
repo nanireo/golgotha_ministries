@@ -115,6 +115,8 @@
 
   .arrow-button {
     font-size: 2.5rem; /* Smaller arrow buttons for mobile */
+    top: 10px;
+
   }
 
   .close-buttonimg {
