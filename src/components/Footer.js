@@ -1,44 +1,30 @@
-import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import VisitorCount from './VisitorCount';
+import React, { useEffect, useState } from 'react';
 
+function VisitorCount() {
+  const [visits, setVisits] = useState(0);
+  const apiUrl = 'https://api.countapi.xyz/hit/golgotha-ministries.onrender.com/visits';
 
+  useEffect(() => {
+    const fetchVisitorCount = async () => {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        setVisits(data.value);
+      } catch (error) {
+        console.error('Error fetching visitor count:', error);
+      }
+    };
 
-function Footer() {
-    return (
-        <footer className="footer">
-            <div className="footer-content">
-                <div className="footer_logo">
-                    <img src="logo/GM_Logo.png" alt="Golgotha Church Logo" />
-                </div>
-                <div className="contact-info">
-                    <h3 className="Contact-Uscolor">Golgotha Church</h3>
-                    <p><b>Contact Person:</b> Samuel &nbsp; &nbsp; <br></br> <br></br><b>Email:</b> golgothaministryarmr@gmail.com</p>
-                    <p>Phone: +91 8309439956</p>
-                </div>
-                <div className="social_media">
-                    <a href="https://www.facebook.com/Golgothaministriesarmoor" target="_blank" rel="noopener noreferrer">
-                        <FaFacebook size={24} color="#F1F1F1" />
-                    </a>
-                    <a href="https://www.instagram.com/golgotha_ministries_official/profilecard/?igsh=d2JjbzY2cjdpbXFn" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram size={24} color="#F1F1F1" />
-                    </a>
-                    <a href="https://youtube.com/@golgothaministryarmoor?si=ETmxZNb6MCvTRIbw" target="_blank" rel="noopener noreferrer">
-                        <FaYoutube size={24} color="#F1F1F1" />
-                    </a>
-                </div>
-            </div>
-            <div className="footer-bottom">
-                <hr className="divider" />
-                <div className="copyright-notice">
-                    &copy; 2024 Golgotha Church
-                    <div>
-                        <VisitorCount />
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+    // Fetch visitor count when the component mounts
+    fetchVisitorCount();
+  }, [apiUrl]);
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>Welcome to Our Website!</h1>
+      <h2>Visitor Count: <span>{visits}</span></h2>
+    </div>
+  );
 }
 
-export default Footer;
+export default VisitorCount;
