@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import VisitorCount from './VisitorCount';
+// import VisitorCount from './VisitorCount';
 
 
 
@@ -30,12 +30,16 @@ function Footer() {
             </div>
             <div className="footer-bottom">
                 <hr className="divider" />
-                <div className="copyright-notice">
-                    &copy; 2024 Golgotha Church
-                    <div>
-                        <VisitorCount />
-                    </div>
+                <div className="copyright-notice"> 
+                &copy; 2024 Golgotha Church &nbsp;&nbsp;&nbsp; Powered By  &nbsp;
+                <a href="https://www.n-reo.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1f2833', textDecoration: 'none' }}>
+                    N-Reo Software Solutions
+                </a>
+                {/* <div>
+                    <VisitorCount />
+                </div> */}
                 </div>
+
             </div>
         </footer>
     );

@@ -65,8 +65,10 @@
 }
 
 .form-iframe {
-  width: 100%;
+  width: 50%;
   border: none;
+  box-shadow: 1px  0px 15px #66fcf1; /* Slightly larger shadow on hover */
+
 }
 
 @media (max-width: 768px) {
