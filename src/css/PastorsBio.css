@@ -1,0 +1,90 @@
+.pastors-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+ 
+
+.pastor-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    text-align: justify;
+    
+}
+
+ 
+
+.pastor-image {
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 20px;
+    margin-right: 20px; /* Space between image and text */
+    object-fit: contain; /* Ensures the entire image is visible without distortion */
+}
+
+.pastor-content {
+    padding: 0 15px;
+    flex: 1; /* Allow the content to take up available space */
+    
+}
+
+.pastor-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.pastor-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.show-more-btn {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.show-more-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .pastor-content h2 {
+        font-size: 1.3em;
+    }
+
+    .pastor-content p {
+        font-size: 0.9em;
+    }
+
+    .pastor-card {
+        flex-direction: column; /* Stack in mobile view */
+        align-items: center; /* Center align */
+    }
+
+    .pastor-image {
+        margin-right: 0; /* Remove right margin in mobile */
+        margin-bottom: 15px; /* Add bottom margin in mobile */
+    }
+}
+
+/* Additional mobile view adjustments for 480px */
+@media (max-width: 480px) {
+    .pastor-card {
+        flex-direction: column; /* Stack images and text in mobile view */
+        align-items: center; /* Center align */
+    }
+
+    .pastor-content {
+        text-align: center; /* Center text for better readability */
+    }
+}

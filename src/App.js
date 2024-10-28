@@ -20,6 +20,7 @@ import './css/FAQs.css';
 import './css/WhatsappPopup.css';
 import './css/InspirationalImage.css';
 import './css/VerseSearch.css';
+import './css/PastorsBio.css';
 
 
 import Header from './components/Header';

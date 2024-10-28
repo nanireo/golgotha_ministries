@@ -8,6 +8,7 @@ import PdfViewer from './PdfMessages';
 import InspirationalImage from './InspirationalImage';
 // import VerseSearch from './VerseSearch';
 
+import PastorsBio from './PastorsBio';
 
 
 function Home() {
@@ -22,6 +23,9 @@ function Home() {
             <div>
                 <Banner />
             </div> 
+            <div>
+                <PastorsBio/>
+            </div>
             <div>
                 <InspirationalImage />
             </div> 

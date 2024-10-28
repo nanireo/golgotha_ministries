@@ -21,7 +21,6 @@ function VisitorCount() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Welcome to Our Website!</h1>
       <h2>Visitor Count: <span>{visits}</span></h2>
     </div>
   );
