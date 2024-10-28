@@ -29,7 +29,8 @@
   margin-top: 5px;
   font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: #66fcf1;
+  font-size: 20px;
 }
 
 .pdf-display {
@@ -43,8 +44,8 @@
   position: absolute; /* Position it in the top right corner */
   top: 10px; /* Position from the top */
   right: 10px; /* Position from the right, use percentage or pixel as needed */
-  background-color: #ff5733;
-  color: white;
+  background-color: #66fcf1;
+  color: #1f2833;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -52,15 +53,15 @@
 }
 
 .close-button:hover {
-  background-color: #c74c28;
+  background-color: #ff3c00;
 }
 
 .download-button {
   position: absolute; /* Position it in the top left corner */
   top: 10px; /* Position from the top */
   left: 10px; /* Position from the left, use percentage or pixel as needed */
-  background-color: #ff5733;
-  color: white;
+  background-color: #66fcf1;
+  color: #1f2833;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -69,18 +70,27 @@
   z-index: 10; /* Ensure it is above other elements */
 }
 
+
+
 .download-button:hover {
-  background-color: #c74c28;
+  background-color: #ff3c00;
 }
 
 .nav-button {
-  background-color: #ff5733;
-  color: white;
+  background-color: #66fcf1;
+  color: #1f2833;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px;
+  box-shadow: 1px 0px 15px #66fcf1; /* Shadow effect */
+
+}
+
+.nav-button:hover {
+  background-color: #1f2833;
+  color: #66fcf1;
 }
 
 /* Responsive styles */

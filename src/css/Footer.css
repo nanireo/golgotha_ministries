@@ -1,9 +1,12 @@
 .footer {
-    background-color: #003366; /* Background color */
+    background: linear-gradient(0deg, #1f2833, #66fcf1); /* Gradient background */
     color: #F1F1F1; /* Text color */
     text-align: center;
     padding: 20px; /* Padding */
+    box-shadow: 1px 0px 40px #66fcf1; /* Shadow effect */
+
 }
+
 
 .footer-content {
     display: flex;
@@ -40,7 +43,8 @@
 }
 
 .Contact-Uscolor {
-    color: #ff2b01;
+    color: #010303;
+    font-size: 30px;
 }
 
 .footer-bottom {

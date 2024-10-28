@@ -2,22 +2,24 @@
    max-width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background: linear-gradient(135deg, rgb(93, 65, 76), #4a90e2); /* Linear gradient */
+  background:  #0b0c10
 }
 
 .youtube-title {
   font-size: 32px;
-  color: #ffffff;
-  text-align: center;
+   text-align: center;
   margin-bottom: 10px;
+  color: #66fcf1;
+  text-shadow: 1px 0px 10px #66fcf1(0, 0, 0, 0.5); /* Shadow effect */
 }
 
 .samuel-title {
-  color: #FFD700; /* Gold color */
+  color: #ffffff; /* Gold color */
   font-size: 28px;
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
+ 
 }
 
 .subscribe-btn-wrapper {
@@ -66,8 +68,8 @@
 .toggle-btn {
   display: block;
   margin: 20px auto;
-  background: #ff8c00;
-  color: white;
+  background: linear-gradient(10deg, #1f2833, #66fcf1); /* Gradient background */
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -76,10 +78,14 @@
   text-transform: uppercase;
   border-radius: 4px;
   transition: background-color 0.3s;
+  box-shadow: 1px 0px 15px #66fcf1; /* Shadow effect */
+
 }
 
 .toggle-btn:hover {
-  background-color: #ff4500;
+  background: #66fcf1;
+    color: #1f2833;
+     border-radius: 5px;
 }
 
 /* Media query for screens 720px and below */

@@ -42,7 +42,7 @@ const ImageGallery = () => {
 
   return (
     <div className="gallery-container">
-      <h1 style={{ fontSize: '32px', color: '#FF5733', textAlign: 'center' }}>Gallery</h1>
+      <h1 style={{ fontSize: '32px', color: '#66fcf1', textAlign: 'center' }}>Gallery</h1>
       {/* Image grid */}
       <div className="image-grid">
         {imageArray.map((image, index) => (

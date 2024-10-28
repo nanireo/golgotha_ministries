@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+ 
+
 }
 
 .image-grid {
@@ -57,7 +59,7 @@
   background: transparent;
   border: none;
   font-size: 3rem;
-  color: #ff0000; /* Change as needed */
+  color: #66fcf1; /* Change as needed */
   cursor: pointer;
   position: absolute; /* Position absolute for arrows */
   top: 50%; /* Center vertically */
@@ -80,13 +82,18 @@
   background: transparent;
   border: none;
   font-size: 3rem;
-  color: #ff0000;
+  color: #66fcf1;
   cursor: pointer;
   z-index: 2500; /* Ensure close button is clickable and on top of everything */
 }
 
+.arrow-button:hover{
+  background-color: #1f2833; 
+}
+
 .close-buttonimg:hover {
-  background-color: #000000; /* Optional hover color change */
+  color: #ff0000;
+  background-color: #1f2833; /* Optional hover color change */
  }
 
  @media screen and (max-width: 720px) {
@@ -106,7 +113,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #66fcf1;
     cursor: pointer;
   }
 
@@ -120,7 +127,7 @@
 
   .close-buttonimg {
     top: 260px;
-    color: #ffffff;
+    color: #ff0000;
 
     right: 10px;
     font-size: 3rem;

@@ -2,14 +2,14 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #1f2833;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #66fcf1(0, 0, 0, 0.1);
     text-align: center;
   }
   
   .contact-form-container h2 {
-    color: #003366;
+    color: #66fcf1;
     font-size: 32px;
     margin-bottom: 20px;
   }
@@ -28,7 +28,7 @@
   
   .form-group label {
     margin-bottom: 5px;
-    color: #333;
+    color: #ffffff;
     font-size: 16px;
   }
   
@@ -44,22 +44,30 @@
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #003366;
+    border-color: #ffffff;
   }
   
   .submit-btn {
     padding: 10px 20px;
-    background-color: #003366;
-    color: #fff;
+    background-color: #1f2833;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 1px 0px 15px #66fcf1; /* Shadow effect */
+
   }
   
   .submit-btn:hover {
-    background-color: #002244;
+    background-color: #66fcf1;
+    color: #1f2833;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transform: scale(1.0); /* Increase size on hover */
+    
+
   }
   
   /* Responsive adjustments */

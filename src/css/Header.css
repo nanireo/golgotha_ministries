@@ -1,16 +1,27 @@
-/* Base styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+     background-color: #0b0c10 ; /* Background color with transparency */
+     background-size: cover; /* Cover the entire viewport */
+     background-repeat: no-repeat; /* Do not repeat the image */
 }
+
+
+.header {
+    position: relative; /* If you want to position elements on top of the header */
+    z-index: 1; /* Ensure header is above the background */
+}
+
+/* Additional styles for the header or any other elements can go here */
+
+
 
 .no-scroll {
     overflow: hidden;
 }
 
 .nav-links {
-    background-color: #003366;
-    color: #fff;
+    background-color:#1f2833 ;
+    color: #66fcf1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -21,6 +32,7 @@ body {
 
 .logo-container {
     display: flex;
+    color: #66fcf1;
     justify-content: space-between;
     align-items: center;
     width: 80%;
@@ -55,7 +67,7 @@ nav ul li {
 }
 
 nav ul a {
-    color: #fff;
+    color: #66fcf1;
     text-decoration: none;
     padding: 10px;
     border-radius: 2px;
@@ -63,25 +75,27 @@ nav ul a {
 }
 
 .HeaderP {
-    color: #fff;
+    color: #66fcf1;
     text-decoration: none;
     font-size: 18px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .HeaderP:hover {
-    background-color: #ff3232;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    transform: scale(1.2); /* Increase size on hover */
+    background-color: #66fcf1;
+    color: #1f2833;
+    padding: 4px;
+    border-radius: 4px;
+    transform: scale(1.0); /* Increase size on hover */
+    box-shadow: 1px 0px 15px #66fcf1; /* Shadow effect */
+
 }
 
 /* Responsive Design */
 .menu-icon {
     display: none;
     cursor: pointer;
-    color: #003366;
+    color: #66fcf1;
 }
 
 .nav-links.open {
@@ -97,11 +111,13 @@ nav ul a {
         left: 0;
         right: 0;
         width: 100%;
-        background-color: #fff; /* Add background to ensure visibility */
+        background-color: #0b0c10; /* Add background to ensure visibility */
         z-index: 1000; /* Ensure it stays above other content */
          height: 100px; /* Adjust height for mobile view */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
     }
+
+    
 
     .menu-icon {
         display: block;
@@ -111,7 +127,7 @@ nav ul a {
     .nav-links { 
         display: none;
         flex-direction: column;
-        background-color: #003366;
+        background-color: #1f2833;
         position: fixed;
         top: 100px; /* Open the menu right below the fixed logo section */
         right: 0;

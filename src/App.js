@@ -7,9 +7,7 @@ import { BrowserRouter , HashRouter as Router, Routes, Route } from 'react-route
 import './css/Header.css';
 import './css/Banner.css';
 import './css/Footer.css';
-import './css/Home.css';
-import './css/HomeDoctorProfile.css';
-import './css/YoutubeVideos.css'; // Import the CSS
+ import './css/YoutubeVideos.css'; // Import the CSS
 import './css/ContactUs.css'; // Optional CSS for styling
 import './css/Contactform.css';
 import './css/BibleQuiz.css';

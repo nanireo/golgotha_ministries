@@ -30,31 +30,51 @@
 .pastor-content {
     padding: 0 15px;
     flex: 1; /* Allow the content to take up available space */
+    color: #66fcf1;
+
     
 }
 
-.pastor-content h2 {
+.pastor-content h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-size: 30px;
 }
 
 .pastor-content p {
     font-size: 1em;
     line-height: 1.6;
+    color: white;
 }
 
 .show-more-btn {
-    background-color: #007bff; /* Button color */
+    background: linear-gradient(10deg, #1f2833, #66fcf1); /* Gradient background */
     color: white; /* Text color */
     border: none; /* Remove border */
     padding: 10px 15px; /* Padding */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
+    box-shadow: 1px 0px 15px #66fcf1; /* Shadow effect */
+
+}
+
+
+ 
+
+.show-more-btn:hover {
+    background: #66fcf1;
+    color: #ffffff;
+    border: 2px solid #ffffff; /* Stroke changes color on hover */
+    border-radius: 5px;
 }
 
 .show-more-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
+    background: #062434;
+    color: #ffffff;
+     border-radius: 5px;
+ }
+
+ 
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {
@@ -64,6 +84,7 @@
 
     .pastor-content p {
         font-size: 0.9em;
+        text-align: justify;
     }
 
     .pastor-card {

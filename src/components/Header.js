@@ -29,7 +29,7 @@ function Header() {
                         <img src="logo/GM_Logo.png" alt="Logo" />
                     </div>
                     <div className="college-info">
-                        <h3>Golgotha Ministries</h3>
+                        <h2>Golgotha Ministries</h2>
                         
                     </div>
                    
@@ -43,14 +43,14 @@ function Header() {
             <header className={`nav-links ${isOpen ? 'open' : ''}`}>
                 <nav>
                     <ul>
-                        <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'>Home</p></Link> 
-                        <Link to="/AboutUs" onClick={handleLinkClick}><p className='HeaderP'>About</p></Link> 
+                        <Link to="/Home" onClick={handleLinkClick}><p className='HeaderP'><b>HOME</b></p></Link> 
+                        <Link to="/AboutUs" onClick={handleLinkClick}><p className='HeaderP'><b>ABOUT</b></p></Link> 
 
-                        <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'>Gallery</p></Link> 
-                        <Link to="/FAQs" onClick={handleLinkClick}><p className='HeaderP'>FAQs</p></Link> 
-                        <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'>Bible Quiz</p></Link> 
+                        <Link to="/ImageGallery" onClick={handleLinkClick}><p className='HeaderP'><b>GALLERY</b></p></Link> 
+                        <Link to="/FAQs" onClick={handleLinkClick}><p className='HeaderP'><b>FAQs</b></p></Link> 
+                        <Link to="/BibleQuiz" onClick={handleLinkClick}><p className='HeaderP'><b>BIBLE QUIZ</b></p></Link> 
                         {/* <Link to="/PdfMessages" onClick={handleLinkClick}><p className='HeaderP'>PDF Messages</p></Link> */}
-                        <Link to="/ContactUs" onClick={handleLinkClick}><p className='HeaderP'>Contact Us</p></Link> 
+                        <Link to="/ContactUs" onClick={handleLinkClick}><p className='HeaderP'><b>CONTACT US</b></p></Link> 
                     </ul>
                 </nav>
             </header>

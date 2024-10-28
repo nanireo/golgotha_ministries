@@ -2,7 +2,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #0b0c10;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -17,17 +17,17 @@
 
 .contact-container h2 {
   font-size: 32px;
-  color: #003366;
+  color: #66fcf1;
   margin-bottom: 20px;
   text-align: center;
 
 }
 
 .contact-infob {
-  background-color: #fff;
+  background-color: #1f2833;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px #66fcf1(0, 0, 0, 0.1);
 }
 
 .info-item {
@@ -41,23 +41,23 @@
 .info-item h3 {
   font-size: 20px;
   margin-bottom: 5px;
-  color: #003366;
+  color: #66fcf1;
 }
 
 .info-item p {
   font-size: 16px;
-  color: #333;
+  color: #ffffff;
 }
 
 .info-item a {
-  color: #003366;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 .info-item a:hover {
   text-decoration: underline;
-  color: #002244;
+  color: #ffffff;
 }
 .phone-link {
   display: flex;

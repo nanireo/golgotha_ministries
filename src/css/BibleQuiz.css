@@ -3,8 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgb(253, 9, 106), #4a90e2); /* Linear gradient */
-
+ 
 
 }
 
@@ -21,11 +20,14 @@
   margin: 10px;
   transition: transform 0.3s ease;
   border-radius: 5px;
+  box-shadow: 1px 0px 15px #66fcf1; /* Shadow effect */
 }
 
 .quiz-image:hover {
   transform: scale(1.1);
+  box-shadow: 1px  0px 15px #66fcf1; /* Slightly larger shadow on hover */
 }
+
 
 .form-wrapper {
   position: relative;
