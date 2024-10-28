@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Use BrowserRouter alias
+import { BrowserRouter, HashRouter  as Router, Routes, Route } from 'react-router-dom'; // Use BrowserRouter alias
+import { Helmet } from 'react-helmet';
+
 import './css/Header.css';
 import './css/Banner.css';
 import './css/Footer.css';
@@ -30,11 +32,7 @@ import WhatsappPopup from './components/WhatsappPopup';
 function App() {
     return (
         <div className="App">
-            <Helmet>
-                <title>Golgotha Ministries - Pastor B. N. Rathnam Testimony | Pastor Samuel Mories Bandela, Armoor Church</title>
-                <meta name="description" content="Welcome to Golgotha Ministries. Discover the inspiring testimonies of Pastor B. N. Rathnam and Pastor Samuel Mories Bandela at Armoor Church. Join our Christian ministry and be part of our faith journey." />
-                <meta name="keywords" content="Golgotha Ministries, Pastor B. N. Rathnam, Pastor Samuel Mories Bandela, Armoor Church, Christian Ministry, Church Website, Testimonies, Faith Journey" />
-            </Helmet>
+           
             <Router>
                 <Header />
                 <Routes>
