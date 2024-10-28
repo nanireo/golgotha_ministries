@@ -51,7 +51,16 @@
     color: #333;
   }
   
-  @media (max-width: 600px) {
+   
+    @media (max-width: 600px) {
+      .faq-container h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+        color: #66fcf1;
+        text-align: center;
+        margin-bottom: 20px; /* Add some spacing if needed */
+      }
+    
+    
     .faq-container {
       padding: 10px;
     }

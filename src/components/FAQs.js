@@ -52,7 +52,7 @@ const FAQs = () => {
 
   return (
     <div className="faq-container">
-      <br></br>
+      
             <h1 style={{ fontSize: '32px', color: '#66fcf1', textAlign: 'center' }}>FAQs</h1>
 
       {faqs.map((faq, index) => (
