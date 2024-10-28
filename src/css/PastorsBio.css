@@ -20,12 +20,11 @@
 
 .pastor-image {
     width: 100%;
-    max-width: 250px;
+    max-width: 230px;
     max-height: 250px;
     border-radius: 20px;
     margin-right: 20px; /* Space between image and text */
-    object-fit: contain; /* Ensures the entire image is visible without distortion */
-}
+ }
 
 .pastor-content {
     padding: 0 15px;

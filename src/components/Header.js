@@ -29,7 +29,7 @@ function Header() {
                         <img src="logo/GM_Logo.png" alt="Logo" />
                     </div>
                     <div className="college-info">
-                        <h2>Golgotha Ministries</h2>
+                        <h2>Golgotha <br></br>Ministries</h2>
                         
                     </div>
                    
