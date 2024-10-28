@@ -31,8 +31,8 @@ function Footer() {
             <div className="footer-bottom">
                 <hr className="divider" />
                 <div className="copyright-notice"> 
-                &copy; 2024 Golgotha Church &nbsp;&nbsp;&nbsp; Powered By  &nbsp;
-                <a href="https://www.n-reo.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1f2833', textDecoration: 'none' }}>
+                &copy; 2024 Golgotha Church &nbsp;&nbsp;&nbsp; <br></br> Powered By  &nbsp;
+                <a href="https://www.n-reo.com" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none' }}>
                     N-Reo Software Solutions
                 </a>
                 {/* <div>

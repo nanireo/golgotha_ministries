@@ -1,9 +1,9 @@
 .footer {
-    background: linear-gradient(   #1f2833, #66fcf1); /* Gradient background */
+    background: linear-gradient(10deg, #1f2833, #66fcf1); /* Gradient background */
     color: #F1F1F1; /* Text color */
     text-align: center;
     padding: 20px; /* Padding */
-    /* box-shadow: 1px 0px 40px #66fcf1; Shadow effect */
+    box-shadow: 1px 0px 40px #66fcf1; /* Shadow effect */
 
 }
 
@@ -43,7 +43,7 @@
 }
 
 .Contact-Uscolor {
-    color: #ffffff;
+    color: #010303;
     font-size: 30px;
 }
 
@@ -60,7 +60,7 @@
 
 .copyright-notice {
     font-size: 14px; /* Font size */
-    color: #1f2833; /* Text color */
+    color: #F1F1F1; /* Text color */
 }
 
 /* Responsive Styles */

@@ -32,12 +32,13 @@ body {
 
 .logo-container {
     display: flex;
-    color: #66fcf1;
+    color: #1f2833;
+    background-color:#ffffff ;
+
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    max-width: 1000px;
-    height: 100px;
+    width: 100%;
+     height: 100px;
 }
 
 .left-section {
@@ -95,7 +96,7 @@ nav ul a {
 .menu-icon {
     display: none;
     cursor: pointer;
-    color: #66fcf1;
+    color: #1f2833;
 }
 
 .nav-links.open {
@@ -111,13 +112,11 @@ nav ul a {
         left: 0;
         right: 0;
         width: 100%;
-        background-color: #0b0c10; /* Add background to ensure visibility */
+        background-color: #fff; /* Add background to ensure visibility */
         z-index: 1000; /* Ensure it stays above other content */
          height: 100px; /* Adjust height for mobile view */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
     }
-
-    
 
     .menu-icon {
         display: block;
@@ -127,7 +126,7 @@ nav ul a {
     .nav-links { 
         display: none;
         flex-direction: column;
-        background-color: #1f2833;
+        background-color: #003366;
         position: fixed;
         top: 100px; /* Open the menu right below the fixed logo section */
         right: 0;
