@@ -125,7 +125,7 @@ nav ul a {
     .nav-links { 
         display: none;
         flex-direction: column;
-        background-color: #003366;
+        background-color: #1f2833;
         position: fixed;
         top: 100px; /* Open the menu right below the fixed logo section */
         right: 0;
