@@ -24,11 +24,12 @@ function Home() {
                 <Banner />
             </div> 
             <div>
-                <PastorsBio/>
-            </div>
-            <div>
                 <InspirationalImage />
             </div> 
+            <div>
+                <PastorsBio/>
+            </div>
+           
             {/* <div>
                 <VerseSearch />
             </div>  */}
