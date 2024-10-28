@@ -65,7 +65,7 @@
 }
 
 .form-iframe {
-  width: 50%;
+  width: 100%;
   border: none;
   box-shadow: 1px  0px 15px #66fcf1; /* Slightly larger shadow on hover */
 
