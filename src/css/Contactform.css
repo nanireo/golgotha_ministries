@@ -73,8 +73,7 @@
   /* Responsive adjustments */
   @media (max-width: 600px) {
     .contact-form-container {
-      padding: 15px;
-    }
+     }
   
     .contact-form-container h2 {
       font-size: 28px;

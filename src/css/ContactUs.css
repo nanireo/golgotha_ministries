@@ -1,5 +1,5 @@
 .contact-container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px;
   background-color: #0b0c10;
@@ -91,8 +91,7 @@
 /* Mobile view adjustments */
 @media (max-width: 600px) {
   .contact-container {
-    padding: 15px;
-    margin-top: 20%;
+     margin-top: 20%;
 
   }
 
