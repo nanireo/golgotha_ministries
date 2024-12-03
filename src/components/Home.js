@@ -23,6 +23,10 @@ function Home() {
             <div>
                 <Banner />
             </div> 
+            <br></br>
+            <div>
+                <img src={"metingspic/meetings.jpeg"} alt="Church" style={{ width: '100%', height: 'auto' }} />
+            </div>
             <div>
                 <InspirationalImage />
             </div> 

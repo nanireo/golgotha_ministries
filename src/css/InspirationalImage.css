@@ -7,6 +7,10 @@
     color: #000000;
 }
 
+.bible-widgets h2{
+     color: #ffffff;
+}
+
 .widget {
     width: 100%; /* Full width for the widget */
     max-width: 344px; /* Maximum width for the widget */
